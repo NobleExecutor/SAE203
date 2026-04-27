@@ -1,20 +1,248 @@
-body {
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
     margin: 0;
+    padding: 0;
 }
 
-.font-matisse {
-    font-family: MatissePro;
+html,
+body {
+    width: 100%;
+    height: 100%;
+    background: #000;
+    color: #fff;
+    overflow: hidden;
 }
 
-.font-helvetica {
-    font-family: HelveticaNeue;
+.title-card {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    padding-left: 8vw;
+    background: #000;
+    position: relative;
 }
 
-.hero-section {
-    min-height: 100vh;
+.title-card::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: repeating-linear-gradient(0deg,
+            transparent,
+            transparent 2px,
+            rgba(0, 0, 0, 0.07) 2px,
+            rgba(0, 0, 0, 0.07) 4px);
+    pointer-events: none;
+    z-index: 5;
+}
+
+.title-card::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(ellipse at center, transparent 50%, rgba(0, 0, 0, 0.65) 100%);
+    pointer-events: none;
+    z-index: 4;
+}
+
+.title-block {
     display: flex;
     flex-direction: column;
+    line-height: 0.92;
+}
+
+/* NEON and GENESIS — smaller */
+.word-sm {
+    font-family: 'MatissePro';
+    font-size: clamp(2.8rem, 8.5vw, 7rem);
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    color: #fff;
+    font-weight: normal;
+    line-height: 0.92;
+    opacity: 0;
+    animation: fadeIn 0.01s forwards 0.2s;
+}
+
+/* EVANGELION — larger */
+.word-lg {
+    font-family: 'MatissePro';
+    font-size: clamp(4rem, 12.5vw, 10.5rem);
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    color: #fff;
+    font-weight: normal;
+    line-height: 0.92;
+    opacity: 0;
+    animation: fadeIn 0.01s forwards 0.2s;
+}
+
+.japanese {
+    font-family: 'MatissePro', serif;
+    font-size: clamp(0.9rem, 2vw, 1.7rem);
+    color: #c0392b;
+    letter-spacing: 0.1em;
+    margin-top: 0.7em;
+    opacity: 0;
+    animation: fadeIn 0.01s forwards 0.2s;
+}
+
+.episode-label {
+    font-family: 'HelveticaNeue', Helvetica, sans-serif;
+    font-size: clamp(0.55rem, 0.9vw, 0.75rem);
+    letter-spacing: 0.4em;
+    text-transform: uppercase;
+    color: rgba(255, 255, 255, 0.4);
+    margin-bottom: 1.6rem;
+    opacity: 0;
+    animation: fadeIn 0.01s forwards 0.2s;
+}
+
+.divider {
+    width: clamp(60px, 7vw, 100px);
+    height: 1px;
+    background: rgba(255, 255, 255, 0.5);
+    margin: 1.6rem 0;
+    opacity: 0;
+    animation: expandWidth 0.8s ease forwards 0.4s;
+    transform-origin: left;
+    transform: scaleX(0);
+}
+
+.meta-block {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    opacity: 0;
+    animation: fadeIn 0.01s forwards 0.2s;
+}
+
+.meta-row {
+    display: flex;
+    align-items: baseline;
+    gap: 1.2rem;
+}
+
+.meta-label {
+    font-family: 'HelveticaNeue', Helvetica, sans-serif;
+    font-size: clamp(0.5rem, 0.75vw, 0.65rem);
+    letter-spacing: 0.4em;
+    text-transform: uppercase;
+    color: rgba(255, 255, 255, 0.35);
+    min-width: 7em;
+}
+
+.meta-value {
+    font-family: 'HelveticaNeue', Helvetica, sans-serif;
+    font-size: clamp(0.6rem, 0.9vw, 0.78rem);
+    letter-spacing: 0.15em;
+    color: rgba(255, 255, 255, 0.8);
+}
+
+.meta-value.accent {
+    color: #e8671a;
+}
+
+.corner {
+    position: absolute;
+    width: 36px;
+    height: 36px;
+    opacity: 0;
+    animation: fadeIn 0.01s forwards 0.2s;
+}
+
+.corner--tl {
+    top: 2rem;
+    left: 2rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.9);
+    border-left: 1px solid rgba(255, 255, 255, 0.9);
+}
+
+.corner--tr {
+    top: 2rem;
+    right: 2rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.9);
+    border-right: 1px solid rgba(255, 255, 255, 0.9);
+}
+
+.corner--bl {
+    bottom: 2rem;
+    left: 2rem;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.9);
+    border-left: 1px solid rgba(255, 255, 255, 0.9);
+}
+
+.corner--br {
+    bottom: 2rem;
+    right: 2rem;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.9);
+    border-right: 1px solid rgba(255, 255, 255, 0.9);
+}
+
+.bottom-line {
+    position: absolute;
+    bottom: 2.2rem;
+    left: 8vw;
+    right: 8vw;
+    display: flex;
+    justify-content: space-between;
+    opacity: 0;
+    animation: fadeIn 0.01s forwards 0.2s;
+}
+
+.bottom-line span {
+    font-family: 'HelveticaNeue', Helvetica, sans-serif;
+    font-size: clamp(0.45rem, 0.65vw, 0.58rem);
+    letter-spacing: 0.3em;
+    color: rgba(255, 255, 255, 0.2);
+    text-transform: uppercase;
+}
+
+.enter-btn-wrap {
+    position: absolute;
+    bottom: 5rem;
+    left: 0;
+    right: 0;
+    display: flex;
     justify-content: center;
-    align-items: center;
-    font-size: 5rem;
+    opacity: 0;
+    animation: fadeIn 0.01s forwards 0.2s;
+}
+
+.enter-btn {
+    display: inline-block;
+    font-family: 'HelveticaNeue', Helvetica, sans-serif;
+    font-size: clamp(0.55rem, 0.8vw, 0.7rem);
+    letter-spacing: 0.5em;
+    text-transform: uppercase;
+    color: #fff;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    padding: 0.8em 2.2em;
+    cursor: pointer;
+    text-decoration: none;
+    background: transparent;
+    transition: background 0.2s, color 0.2s, border-color 0.2s;
+    white-space: nowrap;
+}
+
+.enter-btn:hover {
+    background: #fff;
+    color: #000;
+    border-color: #fff;
+}
+
+@keyframes fadeIn {
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes expandWidth {
+    to {
+        opacity: 1;
+        transform: scaleX(1);
+    }
 }
