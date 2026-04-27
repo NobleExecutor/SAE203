@@ -39,23 +39,23 @@
                     <span class="meta-value">Oct 1995 — Mar 1996</span>
                 </div>
                 <div class="meta-row">
-                    <span class="meta-label">Characters</span>
+                    <span class="meta-label">Personnages</span>
                     <span class="meta-value">10</span>
                 </div>
                 <div class="meta-row">
-                    <span class="meta-label">Angels</span>
-                    <span class="meta-value accent">17</span>
+                    <span class="meta-label">Anges</span>
+                    <span class="meta-value">17</span>
                 </div>
             </div>
 
         </div>
 
         <div class="enter-btn-wrap">
-            <a class="enter-btn" href="#">Enter the Wiki</a>
+            <a class="enter-btn" href="search.php">Entrer dans la base de données</a>
         </div>
 
         <div class="bottom-line">
-            <span>EVA-WIKI &nbsp; System Initialised</span>
+            <span>EVA-WIKI &nbsp; >System Initialized</span>
             <span>NERV &nbsp; HQ &nbsp;—&nbsp; Tokyo-3</span>
         </div>
     </section>
