@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/fontface.css">
     <link rel="stylesheet" href="css/style-search.css">
-    <title>NGE Wiki - search</title>
+    <title>NGE Wiki - Units</title>
 </head>
 
 <body>
@@ -17,9 +17,9 @@
     </a>
     <ul class="nav-links">
       <li><a href="index.php">Home</a></li>
-      <li><a href="#" class="active">Personnages</a></li>
+      <li><a href="characters.php">Personnages</a></li>
       <li><a href="episodes.php">Episodes</a></li>
-      <li><a href="units.php">Eva Units</a></li>
+      <li><a href="#" class="active">Eva Units</a></li>
       <li><a href="angels.php">Anges</a></li>
     </ul>
   </nav>
@@ -34,10 +34,10 @@
  
     <!-- Page header -->
     <header class="page-header">
-      <p class="page-header-label">BDD &nbsp;/&nbsp; Fichiers du personnel</p>
+      <p class="page-header-label">BDD &nbsp;/&nbsp; Fichiers des unités EVA</p>
       <h1 class="page-header-title">
-        Personnages
-        <span class="jp">登場人物</span>
+        Unites EVA
+        <span class="jp">EVAユニット</span>
       </h1>
     </header>
  
@@ -48,9 +48,9 @@
         <input
           class="search-input"
           type="text"
-          placeholder="Rechercher un personnage..."
+          placeholder="Rechercher une unité EVA..."
         />
-        <span class="search-count">10 résultats disponibles</span>
+        <span class="search-count">4 résultats disponibles</span>
       </div>
     </div>
  
@@ -62,7 +62,7 @@
  
     <!-- Results meta -->
     <div class="results-meta">
-      <span>Showing 12 of 12 records</span>
+      <span>4 / 4 résultats</span>
       <select class="sort-select">
         <option>Sort — Name A/Z</option>
         <option>Sort — Name Z/A</option>

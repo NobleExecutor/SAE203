@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/fontface.css">
     <link rel="stylesheet" href="css/style-search.css">
-    <title>NGE Wiki - search</title>
+    <title>NGE Wiki - Anges</title>
 </head>
 
 <body>
@@ -17,10 +17,10 @@
     </a>
     <ul class="nav-links">
       <li><a href="index.php">Home</a></li>
-      <li><a href="#" class="active">Personnages</a></li>
+      <li><a href="characters.php">Personnages</a></li>
       <li><a href="episodes.php">Episodes</a></li>
       <li><a href="units.php">Eva Units</a></li>
-      <li><a href="angels.php">Anges</a></li>
+      <li><a href="#" class="active">Anges</a></li>
     </ul>
   </nav>
  
@@ -34,10 +34,10 @@
  
     <!-- Page header -->
     <header class="page-header">
-      <p class="page-header-label">BDD &nbsp;/&nbsp; Fichiers du personnel</p>
+      <p class="page-header-label">BDD &nbsp;/&nbsp; Fichiers des anges</p>
       <h1 class="page-header-title">
-        Personnages
-        <span class="jp">登場人物</span>
+        Anges
+        <span class="jp">天使たち</span>
       </h1>
     </header>
  
@@ -48,9 +48,9 @@
         <input
           class="search-input"
           type="text"
-          placeholder="Rechercher un personnage..."
+          placeholder="Rechercher un ange..."
         />
-        <span class="search-count">10 résultats disponibles</span>
+        <span class="search-count">17 résultats disponibles</span>
       </div>
     </div>
  
@@ -71,7 +71,7 @@
       </select>
     </div>
  
-    <!-- Character grid (placeholder cards — replace with PHP loop) -->
+    <!-- Placeholder, à changer -->
     <div class="character-grid">
  
       <a class="character-card" href="#">

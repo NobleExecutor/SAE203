@@ -273,18 +273,6 @@
         border-color: var(--white);
     }
 
-    .filter-btn.active-red {
-        color: var(--white);
-        background: var(--red);
-        border-color: var(--red);
-    }
-
-    .filter-divider {
-        width: 1px;
-        background: var(--card-border);
-        margin: 0 0.3rem;
-    }
-
     /* ── RESULTS META ── */
     .results-meta {
         display: flex;
@@ -349,42 +337,6 @@
 
     .character-card:nth-child(3) {
         animation-delay: 0.5s;
-    }
-
-    .character-card:nth-child(4) {
-        animation-delay: 0.55s;
-    }
-
-    .character-card:nth-child(5) {
-        animation-delay: 0.6s;
-    }
-
-    .character-card:nth-child(6) {
-        animation-delay: 0.65s;
-    }
-
-    .character-card:nth-child(7) {
-        animation-delay: 0.7s;
-    }
-
-    .character-card:nth-child(8) {
-        animation-delay: 0.75s;
-    }
-
-    .character-card:nth-child(9) {
-        animation-delay: 0.8s;
-    }
-
-    .character-card:nth-child(10) {
-        animation-delay: 0.85s;
-    }
-
-    .character-card:nth-child(11) {
-        animation-delay: 0.9s;
-    }
-
-    .character-card:nth-child(12) {
-        animation-delay: 0.95s;
     }
 
     /* Silhouette / image area */
@@ -500,58 +452,6 @@
         color: rgba(255, 255, 255, 0.3);
         border: 1px solid rgba(255, 255, 255, 0.1);
         padding: 0.25em 0.6em;
-    }
-
-    .card-tag.pilot {
-        color: rgba(192, 57, 43, 0.8);
-        border-color: rgba(192, 57, 43, 0.3);
-    }
-
-    .card-tag.nerv {
-        color: rgba(232, 103, 26, 0.8);
-        border-color: rgba(232, 103, 26, 0.3);
-    }
-
-    .card-tag.seele {
-        color: rgba(180, 160, 100, 0.8);
-        border-color: rgba(180, 160, 100, 0.3);
-    }
-
-    .card-tag.angel {
-        color: rgba(100, 160, 220, 0.8);
-        border-color: rgba(100, 160, 220, 0.3);
-    }
-
-    /* ── PAGINATION ── */
-    .pagination {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        gap: 0.4rem;
-        margin-top: 3rem;
-    }
-
-    .page-btn {
-        font-family: 'HelveticaNeue', Helvetica, sans-serif;
-        font-size: 0.55rem;
-        letter-spacing: 0.3em;
-        color: var(--dim);
-        border: 1px solid var(--card-border);
-        background: transparent;
-        padding: 0.6em 1em;
-        cursor: pointer;
-        transition: color 0.2s, border-color 0.2s, background 0.2s;
-    }
-
-    .page-btn:hover {
-        color: var(--white);
-        border-color: rgba(255, 255, 255, 0.3);
-    }
-
-    .page-btn.active {
-        color: #000;
-        background: var(--white);
-        border-color: var(--white);
     }
 
     /* ── BOTTOM BAR ── */

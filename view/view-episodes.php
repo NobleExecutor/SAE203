@@ -17,8 +17,8 @@
     </a>
     <ul class="nav-links">
       <li><a href="index.php">Home</a></li>
-      <li><a href="#" class="active">Personnages</a></li>
-      <li><a href="episodes.php">Episodes</a></li>
+      <li><a href="characters.php">Personnages</a></li>
+      <li><a href="#" class="active">Episodes</a></li>
       <li><a href="units.php">Eva Units</a></li>
       <li><a href="angels.php">Anges</a></li>
     </ul>
@@ -34,10 +34,10 @@
  
     <!-- Page header -->
     <header class="page-header">
-      <p class="page-header-label">BDD &nbsp;/&nbsp; Fichiers du personnel</p>
+      <p class="page-header-label">BDD &nbsp;/&nbsp; Episodes</p>
       <h1 class="page-header-title">
-        Personnages
-        <span class="jp">登場人物</span>
+        Episodes
+        <span class="jp">エピソード</span>
       </h1>
     </header>
  
@@ -48,21 +48,22 @@
         <input
           class="search-input"
           type="text"
-          placeholder="Rechercher un personnage..."
+          placeholder="Rechercher un episode..."
         />
-        <span class="search-count">10 résultats disponibles</span>
+        <span class="search-count">27 résultats disponibles</span>
       </div>
     </div>
  
     <!-- Filters -->
     <div class="filters">
-      <button class="filter-btn active">All</button>
-      <button class="filter-btn">Pilot</button>
+      <button class="filter-btn active">Tout</button>
+      <button class="filter-btn">Film</button>
+      <button class="filter-btn">Série</button>
     </div>
  
     <!-- Results meta -->
     <div class="results-meta">
-      <span>Showing 12 of 12 records</span>
+      <span>27 / 27 résultats</span>
       <select class="sort-select">
         <option>Sort — Name A/Z</option>
         <option>Sort — Name Z/A</option>

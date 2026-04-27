@@ -123,10 +123,6 @@ body {
     color: rgba(255, 255, 255, 0.8);
 }
 
-.meta-value.accent {
-    color: #e8671a;
-}
-
 .corner {
     position: absolute;
     width: 36px;
