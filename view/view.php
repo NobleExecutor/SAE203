@@ -32,19 +32,19 @@
             <div class="meta-block">
                 <div class="meta-row">
                     <span class="meta-label">Episodes</span>
-                    <span class="meta-value">26 + End of Evangelion</span>
+                    <span class="meta-value">26</span>
                 </div>
                 <div class="meta-row">
-                    <span class="meta-label">Aired</span>
+                    <span class="meta-label">Sortie</span>
                     <span class="meta-value">Oct 1995 — Mar 1996</span>
                 </div>
                 <div class="meta-row">
-                    <span class="meta-label">Studio</span>
-                    <span class="meta-value">Gainax / Tatsunoko Production</span>
+                    <span class="meta-label">Characters</span>
+                    <span class="meta-value">10</span>
                 </div>
                 <div class="meta-row">
-                    <span class="meta-label">Director</span>
-                    <span class="meta-value accent">Anno Hideaki</span>
+                    <span class="meta-label">Angels</span>
+                    <span class="meta-value accent">17</span>
                 </div>
             </div>
 

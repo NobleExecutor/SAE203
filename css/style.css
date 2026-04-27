@@ -63,8 +63,6 @@ body {
     color: #fff;
     font-weight: normal;
     line-height: 0.92;
-    opacity: 0;
-    animation: fadeIn 0.01s forwards 0.2s;
 }
 
 /* EVANGELION — larger */
@@ -76,8 +74,6 @@ body {
     color: #fff;
     font-weight: normal;
     line-height: 0.92;
-    opacity: 0;
-    animation: fadeIn 0.01s forwards 0.2s;
 }
 
 .japanese {
@@ -86,8 +82,6 @@ body {
     color: #c0392b;
     letter-spacing: 0.1em;
     margin-top: 0.7em;
-    opacity: 0;
-    animation: fadeIn 0.01s forwards 0.2s;
 }
 
 .episode-label {
@@ -97,8 +91,6 @@ body {
     text-transform: uppercase;
     color: rgba(255, 255, 255, 0.4);
     margin-bottom: 1.6rem;
-    opacity: 0;
-    animation: fadeIn 0.01s forwards 0.2s;
 }
 
 .divider {
@@ -116,8 +108,6 @@ body {
     display: flex;
     flex-direction: column;
     gap: 0.5rem;
-    opacity: 0;
-    animation: fadeIn 0.01s forwards 0.2s;
 }
 
 .meta-row {
@@ -150,8 +140,6 @@ body {
     position: absolute;
     width: 36px;
     height: 36px;
-    opacity: 0;
-    animation: fadeIn 0.01s forwards 0.2s;
 }
 
 .corner--tl {
@@ -189,15 +177,13 @@ body {
     right: 8vw;
     display: flex;
     justify-content: space-between;
-    opacity: 0;
-    animation: fadeIn 0.01s forwards 0.2s;
 }
 
 .bottom-line span {
     font-family: 'HelveticaNeue', Helvetica, sans-serif;
     font-size: clamp(0.45rem, 0.65vw, 0.58rem);
     letter-spacing: 0.3em;
-    color: rgba(255, 255, 255, 0.2);
+    color: rgba(255, 255, 255, 0.4);
     text-transform: uppercase;
 }
 
@@ -208,8 +194,6 @@ body {
     right: 0;
     display: flex;
     justify-content: center;
-    opacity: 0;
-    animation: fadeIn 0.01s forwards 0.2s;
 }
 
 .enter-btn {
@@ -232,12 +216,6 @@ body {
     background: #fff;
     color: #000;
     border-color: #fff;
-}
-
-@keyframes fadeIn {
-    to {
-        opacity: 1;
-    }
 }
 
 @keyframes expandWidth {
