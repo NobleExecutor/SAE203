@@ -51,7 +51,7 @@
         </div>
 
         <div class="enter-btn-wrap">
-            <a class="enter-btn" href="search.php">Entrer dans la base de données</a>
+            <a class="enter-btn" href="characters.php">Entrer dans la base de données</a>
         </div>
 
         <div class="bottom-line">
