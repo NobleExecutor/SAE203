@@ -36,7 +36,7 @@
     <header class="page-header">
       <p class="page-header-label">BDD &nbsp;/&nbsp; Fichiers du personnel</p>
       <h1 class="page-header-title">
-        Characters
+        Personnages
         <span class="jp">登場人物</span>
       </h1>
     </header>
