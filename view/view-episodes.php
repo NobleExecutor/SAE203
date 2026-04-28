@@ -67,8 +67,6 @@
       <select class="sort-select">
         <option>Sort — Name A/Z</option>
         <option>Sort — Name Z/A</option>
-        <option>Sort — Unit No.</option>
-        <option>Sort — Affiliation</option>
       </select>
     </div>
  

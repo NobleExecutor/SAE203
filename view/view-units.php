@@ -19,7 +19,7 @@
       <li><a href="index.php">Home</a></li>
       <li><a href="characters.php">Personnages</a></li>
       <li><a href="episodes.php">Episodes</a></li>
-      <li><a href="#" class="active">Eva Units</a></li>
+      <li><a href="#" class="active">Unités EVA</a></li>
       <li><a href="angels.php">Anges</a></li>
     </ul>
   </nav>
@@ -56,18 +56,19 @@
  
     <!-- Filters -->
     <div class="filters">
-      <button class="filter-btn active">All</button>
-      <button class="filter-btn">Pilot</button>
+      <button class="filter-btn active">Tout</button>
+      <button class="filter-btn">Yui</button>
+      <button class="filter-btn">Kyoko</button>
+      <button class="filter-btn">Autre</button>
     </div>
  
     <!-- Results meta -->
     <div class="results-meta">
       <span>4 / 4 résultats</span>
       <select class="sort-select">
-        <option>Sort — Name A/Z</option>
-        <option>Sort — Name Z/A</option>
-        <option>Sort — Unit No.</option>
-        <option>Sort — Affiliation</option>
+        <option>Tri — Nom A/Z</option>
+        <option>Tri — Nom Z/A</option>
+        <option>Tri — N. Unité</option>
       </select>
     </div>
  

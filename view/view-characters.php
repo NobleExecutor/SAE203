@@ -56,18 +56,19 @@
  
     <!-- Filters -->
     <div class="filters">
-      <button class="filter-btn active">All</button>
-      <button class="filter-btn">Pilot</button>
+      <button class="filter-btn active">Tout</button>
+      <button class="filter-btn">Pilote</button>
+      <button class="filter-btn">NERV</button>
+      <button class="filter-btn">SEELE</button>
     </div>
  
     <!-- Results meta -->
     <div class="results-meta">
       <span>Showing 12 of 12 records</span>
       <select class="sort-select">
-        <option>Sort — Name A/Z</option>
-        <option>Sort — Name Z/A</option>
-        <option>Sort — Unit No.</option>
-        <option>Sort — Affiliation</option>
+        <option>Tri — Nom A/Z</option>
+        <option>Tri — Nom Z/A</option>
+        <option>Tri — Affiliation</option>
       </select>
     </div>
  
