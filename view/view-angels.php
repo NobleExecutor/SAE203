@@ -83,7 +83,6 @@
           <div class="card-name-en">Placeholder subtitle</div>
           <div class="card-tags">
             <span class="card-tag">Placeholder tag</span>
-            <span class="card-tag">Placeholder tag</span>
           </div>
         </div>
       </a>
