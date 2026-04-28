@@ -1,3 +1,6 @@
+<?php
+  $unitsCount = getUnitTotal();
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -50,7 +53,7 @@
           type="text"
           placeholder="Rechercher une unité EVA..."
         />
-        <span class="search-count">4 résultats disponibles</span>
+        <span class="search-count"><?= $unitsCount[0]["total"] ?> résultats disponibles</span>
       </div>
     </div>
  
@@ -64,7 +67,7 @@
  
     <!-- Results meta -->
     <div class="results-meta">
-      <span>4 / 4 résultats</span>
+      <span>x / x résultats</span>
       <select class="sort-select">
         <option>Tri — Nom A/Z</option>
         <option>Tri — Nom Z/A</option>

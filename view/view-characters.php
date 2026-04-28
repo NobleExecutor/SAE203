@@ -1,3 +1,7 @@
+<?php
+  $personnagesCount = getTableTotal($table = "personnages");
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -50,7 +54,7 @@
           type="text"
           placeholder="Rechercher un personnage..."
         />
-        <span class="search-count">10 résultats disponibles</span>
+        <span class="search-count"><?= $personnagesCount[0]["total"] ?> résultats disponibles</span>
       </div>
     </div>
  
@@ -64,7 +68,7 @@
  
     <!-- Results meta -->
     <div class="results-meta">
-      <span>Showing 12 of 12 records</span>
+      <span>Showing x of x records</span>
       <select class="sort-select">
         <option>Tri — Nom A/Z</option>
         <option>Tri — Nom Z/A</option>

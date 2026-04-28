@@ -1,3 +1,7 @@
+<?php
+  $episodesCount = getTableTotal($table = "episodes");
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -50,7 +54,7 @@
           type="text"
           placeholder="Rechercher un episode..."
         />
-        <span class="search-count">27 résultats disponibles</span>
+        <span class="search-count"><?= $episodesCount[0]["total"] ?> résultats disponibles</span>
       </div>
     </div>
  
@@ -63,7 +67,7 @@
  
     <!-- Results meta -->
     <div class="results-meta">
-      <span>27 / 27 résultats</span>
+      <span>x / x résultats</span>
       <select class="sort-select">
         <option>Sort — Name A/Z</option>
         <option>Sort — Name Z/A</option>

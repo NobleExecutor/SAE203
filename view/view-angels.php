@@ -1,3 +1,7 @@
+<?php
+  $angelsCount = getTableTotal($table = "anges");
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -50,7 +54,7 @@
           type="text"
           placeholder="Rechercher un ange..."
         />
-        <span class="search-count">17 résultats disponibles</span>
+        <span class="search-count"><?= $angelsCount[0]["total"] ?> résultats disponibles</span>
       </div>
     </div>
  
@@ -61,7 +65,7 @@
  
     <!-- Results meta -->
     <div class="results-meta">
-      <span>12 / 12 résultats</span>
+      <span>x / x résultats</span>
       <select class="sort-select">
         <option>Tri — Nom A/Z</option>
         <option>Tri — Nom Z/A</option>

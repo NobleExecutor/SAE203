@@ -1,3 +1,8 @@
+<?php
+    $personnagesCount = getTableTotal($table = "personnages");
+    $episodesCount = getTableTotal($table = "episodes");
+    $angesCount = getTableTotal($table = "anges");
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -32,7 +37,7 @@
             <div class="meta-block">
                 <div class="meta-row">
                     <span class="meta-label">Episodes</span>
-                    <span class="meta-value">26 + The End Of Evangelion</span>
+                    <span class="meta-value"><?= $episodesCount[0]["total"]-1 ?> + The End Of Evangelion</span>
                 </div>
                 <div class="meta-row">
                     <span class="meta-label">Sortie</span>
@@ -40,11 +45,11 @@
                 </div>
                 <div class="meta-row">
                     <span class="meta-label">Personnages</span>
-                    <span class="meta-value">10</span>
+                    <span class="meta-value"><?= $personnagesCount[0]["total"] ?></span>
                 </div>
                 <div class="meta-row">
                     <span class="meta-label">Anges</span>
-                    <span class="meta-value">17</span>
+                    <span class="meta-value"><?= $angesCount[0]["total"] ?></span>
                 </div>
             </div>
 
