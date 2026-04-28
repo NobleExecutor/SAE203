@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/fontface.css">
     <link rel="stylesheet" href="css/style-search.css">
-    <title>NGE Wiki - search</title>
+    <title>NGE Wiki - Personnages</title>
 </head>
 
 <body>
