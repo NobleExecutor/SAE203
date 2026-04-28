@@ -1,16 +1,20 @@
 <?php
-function connexionBDD()
-{
-  try // Connexion à la base de données
-  {
+
+// Fonction de connexion à la base de données
+function connexionBDD() {
+  try {
     $options = array(PDO::MYSQL_ATTR_INIT_COMMAND => "SET NAMES utf8");
     $database = new PDO('mysql:host=localhost;dbname=nge_db', 'root', '', $options);
-  } catch (Exception $err) {
+  } 
+  
+  catch (Exception $err) {
     die('Erreur connexion MySQL : ' . $err->getMessage());
   }
+  
   return $database;
 }
 
+// Fonction qui retourne le nombre d'occurences dans une table passé en paramètre
 function getTableTotal($table) {
   $database = connexionBDD();
 
@@ -21,6 +25,7 @@ function getTableTotal($table) {
   return $result;
 }
 
+// Fonction qui retourne le nombre d'unité EVA distincte
 function getUnitTotal() {
   $database = connexionBDD();
 
