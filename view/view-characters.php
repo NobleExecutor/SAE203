@@ -72,7 +72,7 @@
       </select>
     </div>
  
-    <!-- Character grid (placeholder cards — replace with PHP loop) -->
+    <!-- Placeholder, à changer -->
     <div class="character-grid">
  
       <a class="character-card" href="#">
