@@ -122,29 +122,29 @@
     .corner--tl {
         top: 5rem;
         left: 1.5rem;
-        border-top: 1px solid rgba(255, 255, 255, 0.15);
-        border-left: 1px solid rgba(255, 255, 255, 0.15);
+        border-top: 1px solid rgba(255, 255, 255, 0.9);
+        border-left: 1px solid rgba(255, 255, 255, 0.9);
     }
 
     .corner--tr {
         top: 5rem;
         right: 1.5rem;
-        border-top: 1px solid rgba(255, 255, 255, 0.15);
-        border-right: 1px solid rgba(255, 255, 255, 0.15);
+        border-top: 1px solid rgba(255, 255, 255, 0.9);
+        border-right: 1px solid rgba(255, 255, 255, 0.9);
     }
 
     .corner--bl {
         bottom: 1.5rem;
         left: 1.5rem;
-        border-bottom: 1px solid rgba(255, 255, 255, 0.15);
-        border-left: 1px solid rgba(255, 255, 255, 0.15);
+        border-bottom: 1px solid rgba(255, 255, 255, 0.9);
+        border-left: 1px solid rgba(255, 255, 255, 0.9);
     }
 
     .corner--br {
         bottom: 1.5rem;
         right: 1.5rem;
-        border-bottom: 1px solid rgba(255, 255, 255, 0.15);
-        border-right: 1px solid rgba(255, 255, 255, 0.15);
+        border-bottom: 1px solid rgba(255, 255, 255, 0.9);
+        border-right: 1px solid rgba(255, 255, 255, 0.9);
     }
 
     /* ── MAIN LAYOUT ── */
@@ -467,7 +467,7 @@
         padding: 0 8vw;
         border-top: 1px solid var(--card-border);
         background: rgba(0, 0, 0, 0.9);
-        z-index: 100;
+        z-index: -100;
     }
 
     .bottom-bar span {
