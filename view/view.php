@@ -32,7 +32,7 @@
             <div class="meta-block">
                 <div class="meta-row">
                     <span class="meta-label">Episodes</span>
-                    <span class="meta-value">26</span>
+                    <span class="meta-value">26 + The End Of Evangelion</span>
                 </div>
                 <div class="meta-row">
                     <span class="meta-label">Sortie</span>

@@ -19,7 +19,7 @@
       <li><a href="index.php">Home</a></li>
       <li><a href="#" class="active">Personnages</a></li>
       <li><a href="episodes.php">Episodes</a></li>
-      <li><a href="units.php">Eva Units</a></li>
+      <li><a href="units.php">Unités EVA</a></li>
       <li><a href="angels.php">Anges</a></li>
     </ul>
   </nav>
