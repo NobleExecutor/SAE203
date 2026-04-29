@@ -60,9 +60,18 @@
  
     <!-- Filters -->
     <div class="filters">
-      <button class="filter-btn active">Tout</button>
-      <button class="filter-btn">Film</button>
-      <button class="filter-btn">Série</button>
+      <label>
+        <input class="filter-checkbox" type="checkbox" checked>
+        <span class="filter-btn">Tout</span>
+      </label>
+      <label>
+        <input class="filter-checkbox" type="checkbox">
+        <span class="filter-btn">Film</span>
+      </label>
+      <label>
+        <input class="filter-checkbox" type="checkbox">
+        <span class="filter-btn">Série</span>
+      </label>
     </div>
  
     <!-- Results meta -->

@@ -248,7 +248,11 @@
         flex-wrap: wrap;
         margin-bottom: 2.5rem;
     }
-
+ 
+    .filter-checkbox {
+        display: none;
+    }
+ 
     .filter-btn {
         font-family: 'HelveticaNeue', Helvetica, sans-serif;
         font-size: 0.55rem;
@@ -260,14 +264,16 @@
         padding: 0.5em 1.4em;
         cursor: pointer;
         transition: color 0.2s, border-color 0.2s, background 0.2s;
+        user-select: none;
+        display: inline-block;
     }
-
+ 
     .filter-btn:hover {
         color: var(--white);
-        border-color: rgba(255, 255, 255, 0.3);
+        border-color: rgba(255,255,255,0.3);
     }
-
-    .filter-btn.active {
+ 
+    .filter-checkbox:checked + .filter-btn {
         color: #000;
         background: var(--white);
         border-color: var(--white);

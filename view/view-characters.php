@@ -60,10 +60,22 @@
  
     <!-- Filters -->
     <div class="filters">
-      <button class="filter-btn active">Tout</button>
-      <button class="filter-btn">Pilote</button>
-      <button class="filter-btn">NERV</button>
-      <button class="filter-btn">SEELE</button>
+      <label>
+        <input class="filter-checkbox" type="checkbox" checked>
+        <span class="filter-btn">Tout</span>
+      </label>
+      <label>
+        <input class="filter-checkbox" type="checkbox">
+        <span class="filter-btn">Pilote</span>
+      </label>
+      <label>
+        <input class="filter-checkbox" type="checkbox">
+        <span class="filter-btn">NERV</span>
+      </label>
+      <label>
+        <input class="filter-checkbox" type="checkbox">
+        <span class="filter-btn">SEELE</span>
+      </label>
     </div>
  
     <!-- Results meta -->
