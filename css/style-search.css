@@ -331,18 +331,8 @@
         cursor: pointer;
         text-decoration: none;
         display: block;
-    }
-
-    .character-card:nth-child(1) {
-        animation-delay: 0.4s;
-    }
-
-    .character-card:nth-child(2) {
-        animation-delay: 0.45s;
-    }
-
-    .character-card:nth-child(3) {
-        animation-delay: 0.5s;
+        border: .5px solid black;
+        border-collapse: collapse;
     }
 
     /* Silhouette / image area */
