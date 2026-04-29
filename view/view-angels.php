@@ -74,50 +74,27 @@
     <!-- Placeholder, à changer -->
     <div class="character-grid">
  
-      <a class="character-card" href="#">
-        <div class="card-image">
-          <div class="card-overlay"></div>
-          <div class="card-scan"></div>
-          <span class="card-unit">Placeholder span</span>
-        </div>
-        <div class="card-info">
-          <div class="card-name-jp">Placeholder title</div>
-          <div class="card-name-en">Placeholder subtitle</div>
-          <div class="card-tags">
-            <span class="card-tag">Placeholder tag</span>
+    <?php
+      $allAngels = getAllAngels();
+
+      foreach($allAngels as $angel) {
+    ?>
+        <a class="character-card" href="info.php?type=angel&id=<?= $angel['num']?>">
+            <div class="card-image">
+              <img src="assets/img/angels/<?=$angel['img']?>" alt="<?= $angel['nom']?>">
+              <div class="card-overlay"></div>
+            </div>
+          <div class="card-info">
+            <div class="card-name-jp"><?= $angel['nom_japonais']?></div>
+            <div class="card-name-en"><?= $angel['nom']?></div>
+            <div class="card-tags">
+              <span class="card-tag">Ange N°<?= $angel['num']?></span>
+            </div>
           </div>
-        </div>
-      </a>
- 
-      <a class="character-card" href="#">
-        <div class="card-image">
-          <div class="card-overlay"></div>
-          <div class="card-scan"></div>
-          <span class="card-unit">Placeholder span</span>
-        </div>
-        <div class="card-info">
-          <div class="card-name-jp">Placeholder title</div>
-          <div class="card-name-en">Placeholder subtitle</div>
-          <div class="card-tags">
-            <span class="card-tag">Placeholder tag</span>
-          </div>
-        </div>
-      </a>
- 
-      <a class="character-card" href="#">
-        <div class="card-image">
-          <div class="card-overlay"></div>
-          <div class="card-scan"></div>
-          <span class="card-unit">Placeholder span</span>
-        </div>
-        <div class="card-info">
-          <div class="card-name-jp">Placeholder title</div>
-          <div class="card-name-en">Placeholder subtitle</div>
-          <div class="card-tags">
-            <span class="card-tag">Placeholder tag</span>
-          </div>
-        </div>
-      </a>
+        </a>
+    <?php
+      }
+    ?>
  
     </div>
  

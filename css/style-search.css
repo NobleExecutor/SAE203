@@ -352,28 +352,22 @@
         background: #0a0a0a;
         position: relative;
         overflow: hidden;
-        display: flex;
-        align-items: flex-end;
-        justify-content: center;
+        display: grid;
+        place-items: end center;
     }
 
-    /* Placeholder silhouette using CSS */
-    .card-image::before {
-        content: '';
-        position: absolute;
-        bottom: 0;
-        left: 50%;
-        transform: translateX(-50%);
-        width: 55%;
-        height: 85%;
-        background: rgba(255, 255, 255, 0.04);
-        clip-path: polygon(35% 0%, 65% 0%,
-                72% 12%, 70% 25%,
-                80% 30%, 85% 55%,
-                75% 58%, 78% 100%,
-                22% 100%, 25% 58%,
-                15% 55%, 20% 30%,
-                30% 25%, 28% 12%);
+    .card-image img {
+        max-width: 100%;
+        max-height: 100%;
+        width: auto;
+        height: auto;
+        object-fit: contain;
+        display: block;
+        transition: transform .3s ease;
+    }
+
+    .character-card:hover .card-image img {
+        transform: scale(1.08);
     }
 
     /* Unit designation watermark */

@@ -83,31 +83,29 @@
       <span>Affichage de x / x résultats</span>
     </div>
  
-    <!-- Placeholder, à changer -->
     <div class="character-grid">
 
     <?php
       $allCharacters = getAllCharacters();
 
       foreach($allCharacters as $character) {
-        foreach($character as $key => $val) {
-          
-        }
+    ?>
+        <a class="character-card" href="info.php?type=character&id=<?= $character['id']?>">
+            <div class="card-image">
+              <img src="assets/img/characters/<?=$character['img']?>" alt="<?= $character['nom']?>">
+              <div class="card-overlay"></div>
+            </div>
+          <div class="card-info">
+            <div class="card-name-jp"><?= $character['nom_japonais']?></div>
+            <div class="card-name-en"><?= $character['nom']?></div>
+            <div class="card-tags">
+              <span class="card-tag">Placeholder tag</span>
+            </div>
+          </div>
+        </a>
+    <?php
       }
     ?>
- 
-      <a class="character-card" href="#">
-        <div class="card-image">
-          <div class="card-overlay"></div>
-        </div>
-        <div class="card-info">
-          <div class="card-name-jp">Placeholder title</div>
-          <div class="card-name-en">Placeholder subtitle</div>
-          <div class="card-tags">
-            <span class="card-tag">Placeholder tag</span>
-          </div>
-        </div>
-      </a>
  
     </div>
  
