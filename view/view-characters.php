@@ -81,11 +81,6 @@
     <!-- Results meta -->
     <div class="results-meta">
       <span>Affichage de x / x résultats</span>
-      <select class="sort-select">
-        <option>Tri — Nom A/Z</option>
-        <option>Tri — Nom Z/A</option>
-        <option>Tri — Affiliation</option>
-      </select>
     </div>
  
     <!-- Placeholder, à changer -->
