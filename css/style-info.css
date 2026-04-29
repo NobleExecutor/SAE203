@@ -1,0 +1,269 @@
+
+    /* ── CHARACTER DETAIL PAGE ── */
+    .info-page {
+        padding-bottom: 7rem;
+    }
+
+    .info-header {
+        display: flex;
+        align-items: flex-end;
+        justify-content: space-between;
+        gap: 2rem;
+    }
+
+    .info-back-link {
+        font-size: 0.55rem;
+        letter-spacing: 0.35em;
+        text-transform: uppercase;
+        color: var(--dim);
+        text-decoration: none;
+        border: 1px solid var(--card-border);
+        padding: 0.9rem 1.2rem;
+        transition: color 0.2s, border-color 0.2s, background 0.2s;
+    }
+
+    .info-back-link:hover {
+        color: var(--white);
+        border-color: rgba(255, 255, 255, 0.35);
+        background: rgba(255, 255, 255, 0.03);
+    }
+
+    .info-hero {
+        display: grid;
+        grid-template-columns: minmax(280px, 420px) minmax(0, 1fr);
+        gap: 1px;
+        background: var(--card-border);
+        border: 1px solid var(--card-border);
+        margin-bottom: 1.2rem;
+    }
+
+    .info-portrait-card,
+    .info-summary-panel,
+    .info-section-card {
+        background: #000;
+    }
+
+    .info-portrait-card {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .info-portrait-frame {
+        position: relative;
+        min-height: 580px;
+        display: flex;
+        align-items: flex-end;
+        justify-content: center;
+        background:
+            radial-gradient(circle at top, rgba(192, 57, 43, 0.16), transparent 48%),
+            linear-gradient(180deg, rgba(255, 255, 255, 0.03), rgba(255, 255, 255, 0.01));
+        overflow: hidden;
+    }
+
+    .info-panel-label,
+    .info-portrait-code {
+        position: absolute;
+        font-size: 0.5rem;
+        letter-spacing: 0.4em;
+        text-transform: uppercase;
+        color: rgba(255, 255, 255, 0.28);
+        z-index: 2;
+    }
+
+    .info-panel-label {
+        top: 1rem;
+        left: 1rem;
+    }
+
+    .info-portrait-code {
+        right: 1rem;
+        bottom: 1rem;
+    }
+
+    .info-portrait-image {
+        position: relative;
+        width: min(100%, 340px);
+        max-height: 540px;
+        object-fit: contain;
+        z-index: 1;
+        filter: contrast(1.05);
+    }
+
+    .info-portrait-gradient {
+        position: absolute;
+        inset: 0;
+        background:
+            linear-gradient(to top, rgba(0, 0, 0, 0.78), transparent 42%),
+            linear-gradient(to right, rgba(0, 0, 0, 0.42), transparent 24%, transparent 76%, rgba(0, 0, 0, 0.42));
+        pointer-events: none;
+    }
+
+    .info-portrait-meta {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 1px;
+        background: var(--card-border);
+        border-top: 1px solid var(--card-border);
+    }
+
+    .info-meta-block {
+        padding: 1rem;
+        background: #050505;
+        display: flex;
+        flex-direction: column;
+        gap: 0.4rem;
+    }
+
+    .info-meta-label,
+    .info-data-label,
+    .info-section-index,
+    .info-stat-name {
+        font-size: 0.5rem;
+        letter-spacing: 0.35em;
+        text-transform: uppercase;
+        color: var(--dim);
+    }
+
+    .info-meta-value,
+    .info-data-value,
+    .info-stat-detail {
+        font-size: 0.72rem;
+        letter-spacing: 0.12em;
+        text-transform: uppercase;
+        color: var(--white);
+        line-height: 1.6;
+    }
+
+    .info-summary-panel {
+        padding: 1.5rem;
+        display: flex;
+        flex-direction: column;
+        gap: 1.5rem;
+    }
+
+    .info-summary-topline {
+        display: flex;
+        justify-content: space-between;
+        gap: 1rem;
+        padding-bottom: 1rem;
+        border-bottom: 1px solid var(--card-border);
+        font-size: 0.52rem;
+        letter-spacing: 0.35em;
+        text-transform: uppercase;
+        color: var(--dim);
+    }
+
+    .info-chip-row {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0.6rem;
+    }
+
+    .info-chip {
+        border: 1px solid rgba(255, 255, 255, 0.12);
+        padding: 0.45rem 0.8rem;
+        font-size: 0.5rem;
+        letter-spacing: 0.35em;
+        text-transform: uppercase;
+        color: rgba(255, 255, 255, 0.7);
+        background: rgba(255, 255, 255, 0.03);
+    }
+
+    .info-summary-copy {
+        display: grid;
+        gap: 1rem;
+    }
+
+    .info-summary-copy p,
+    .info-section-text,
+    .info-quote {
+        color: rgba(255, 255, 255, 0.82);
+        line-height: 1.8;
+        font-size: 0.92rem;
+    }
+
+    .info-section-text + .info-section-text {
+        margin-top: 1rem;
+    }
+
+    .info-summary-copy p em {
+        font-style: normal;
+        color: var(--red);
+    }
+
+    .info-data-grid,
+    .info-content-grid {
+        display: grid;
+        gap: 1px;
+        background: var(--card-border);
+    }
+
+    .info-data-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        border: 1px solid var(--card-border);
+    }
+
+    .info-data-card {
+        padding: 1rem 1.1rem;
+        background: #050505;
+        display: flex;
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+
+    .info-content-grid {
+        grid-template-columns: 1.4fr 1fr 1fr;
+        border: 1px solid var(--card-border);
+    }
+
+    .info-section-card {
+        padding: 1.5rem;
+        min-height: 100%;
+    }
+
+    .info-section-heading {
+        display: flex;
+        align-items: baseline;
+        gap: 1rem;
+        margin-bottom: 1.2rem;
+        padding-bottom: 1rem;
+        border-bottom: 1px solid var(--card-border);
+    }
+
+    .info-section-heading h2 {
+        font-size: 1rem;
+        letter-spacing: 0.2em;
+        text-transform: uppercase;
+        font-weight: normal;
+    }
+
+    .info-stat-list {
+        display: grid;
+        gap: 0.9rem;
+    }
+
+    .info-stat-row {
+        display: flex;
+        justify-content: space-between;
+        gap: 1rem;
+        padding-bottom: 0.9rem;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+    }
+
+    .info-stat-detail {
+        text-align: right;
+    }
+
+    .info-quote-card {
+        background:
+            linear-gradient(180deg, rgba(192, 57, 43, 0.08), transparent 35%),
+            #000;
+    }
+
+    .info-quote {
+        font-family: 'MatissePro', serif;
+        font-size: clamp(1.3rem, 2.6vw, 2rem);
+        color: var(--white);
+        letter-spacing: 0.04em;
+        margin-bottom: 1.2rem;
+    }
