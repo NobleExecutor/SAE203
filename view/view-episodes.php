@@ -132,7 +132,7 @@
  
     <!-- Bottom bar -->
     <div class="bottom-bar">
-        <span>EVA-WIKI Archives de diffusion</span>
+        <span>EVA-WIKI >Archives de diffusion</span>
         <span>NERV HQ — Tokyo-3</span>
     </div>
 

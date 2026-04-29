@@ -115,7 +115,7 @@
  
   <!-- Bottom bar -->
   <div class="bottom-bar">
-    <span>EVA-WIKI Fichiers des unités EVA</span>
+    <span>EVA-WIKI >Fichiers des unités EVA</span>
     <span>NERV HQ — Tokyo-3</span>
   </div>
 

@@ -104,7 +104,7 @@
  
   <!-- Bottom bar -->
   <div class="bottom-bar">
-    <span>EVA-WIKI Fichiers des anges</span>
+    <span>EVA-WIKI >Fichiers des anges</span>
     <span>NERV HQ — Tokyo-3</span>
   </div>
 
