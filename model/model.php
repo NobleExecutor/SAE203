@@ -35,3 +35,13 @@ function getUnitTotal() {
   $database = null;
   return $result;
 }
+
+function getCharacters() {
+  $database = connexionBDD();
+
+  $req = $database->query("SELECT nom, nom_japonais, img FROM personnages;");
+  $result = $req->FetchAll(PDO::FETCH_ASSOC);
+
+  $database = null;
+  return $result;
+}

@@ -85,42 +85,20 @@
  
     <!-- Placeholder, à changer -->
     <div class="character-grid">
+
+    <?php
+      $allCharacters = getCharacters();
+
+      foreach($allCharacters as $character) {
+        foreach($character as $key => $val) {
+          
+        }
+      }
+    ?>
  
       <a class="character-card" href="#">
         <div class="card-image">
           <div class="card-overlay"></div>
-          <div class="card-scan"></div>
-          <span class="card-unit">Placeholder span</span>
-        </div>
-        <div class="card-info">
-          <div class="card-name-jp">Placeholder title</div>
-          <div class="card-name-en">Placeholder subtitle</div>
-          <div class="card-tags">
-            <span class="card-tag">Placeholder tag</span>
-          </div>
-        </div>
-      </a>
- 
-      <a class="character-card" href="#">
-        <div class="card-image">
-          <div class="card-overlay"></div>
-          <div class="card-scan"></div>
-          <span class="card-unit">Placeholder span</span>
-        </div>
-        <div class="card-info">
-          <div class="card-name-jp">Placeholder title</div>
-          <div class="card-name-en">Placeholder subtitle</div>
-          <div class="card-tags">
-            <span class="card-tag">Placeholder tag</span>
-          </div>
-        </div>
-      </a>
- 
-      <a class="character-card" href="#">
-        <div class="card-image">
-          <div class="card-overlay"></div>
-          <div class="card-scan"></div>
-          <span class="card-unit">Placeholder span</span>
         </div>
         <div class="card-info">
           <div class="card-name-jp">Placeholder title</div>
