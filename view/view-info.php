@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="css/fontface.css">
     <link rel="stylesheet" href="css/style-global.css">
     <link rel="stylesheet" href="css/style-info.css">
-    <title>NGE Wiki - Character File</title>
+    <title>NGE Wiki - Fiche d'informations</title>
 </head>
 
 <body>
