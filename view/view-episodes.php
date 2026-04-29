@@ -9,6 +9,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/fontface.css">
+    <link rel="stylesheet" href="css/style-search.css">
     <link rel="stylesheet" href="css/style-episodes.css">
     <title>NGE Wiki - Episodes</title>
 </head>
@@ -135,3 +136,5 @@
         <span>EVA-WIKI &nbsp; Broadcast Archives</span>
         <span>NERV &nbsp; HQ &nbsp;—&nbsp; Tokyo-3</span>
     </div>
+</body>
+</html>
