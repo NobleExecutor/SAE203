@@ -36,7 +36,8 @@ function getUnitTotal() {
   return $result;
 }
 
-function getCharacters() {
+// Fonction qui retourne tous les personnages et certaines de leurs infos
+function getAllCharacters() {
   $database = connexionBDD();
 
   $req = $database->query("SELECT nom, nom_japonais, img FROM personnages;");

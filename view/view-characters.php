@@ -87,7 +87,7 @@
     <div class="character-grid">
 
     <?php
-      $allCharacters = getCharacters();
+      $allCharacters = getAllCharacters();
 
       foreach($allCharacters as $character) {
         foreach($character as $key => $val) {
