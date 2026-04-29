@@ -2,6 +2,7 @@
     $personnagesCount = getTableTotal($table = "personnages");
     $episodesCount = getTableTotal($table = "episodes");
     $angesCount = getTableTotal($table = "anges");
+    $unitsCount = getUnitTotal();
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -22,7 +23,7 @@
         <div class="corner corner--br"></div>
 
         <div style="display:flex;flex-direction:column;">
-            <p class="episode-label">Gainax &nbsp;·&nbsp; 1995 &ndash; 1996 &nbsp;·&nbsp; Anno Hideaki</p>
+            <p class="episode-label">Gainax &nbsp;·&nbsp; 1995 &ndash; 1997 &nbsp;·&nbsp; Anno Hideaki</p>
 
             <div class="title-block">
                 <div class="word-sm">Neon</div>
@@ -41,7 +42,7 @@
                 </div>
                 <div class="meta-row">
                     <span class="meta-label">Sortie</span>
-                    <span class="meta-value">Oct 1995 — Mar 1996</span>
+                    <span class="meta-value">Oct 1995 — Jul 1997</span>
                 </div>
                 <div class="meta-row">
                     <span class="meta-label">Personnages</span>
@@ -50,6 +51,10 @@
                 <div class="meta-row">
                     <span class="meta-label">Anges</span>
                     <span class="meta-value"><?= $angesCount[0]["total"] ?></span>
+                </div>
+                <div class="meta-row">
+                    <span class="meta-label">Unités EVA</span>
+                    <span class="meta-value"><?= $unitsCount[0]["total"] ?></span>
                 </div>
             </div>
 
