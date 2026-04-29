@@ -294,7 +294,7 @@
     /* ── CHARACTER GRID ── */
     .character-grid {
         display: grid;
-        grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+        grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
         gap: 1px;
         background: var(--card-border);
         border: 1px solid var(--card-border);
@@ -308,6 +308,7 @@
         cursor: pointer;
         text-decoration: none;
         display: block;
+        min-width: 0;
         border: .5px solid black;
         border-collapse: collapse;
     }

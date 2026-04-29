@@ -51,6 +51,7 @@
         <span class="search-icon">[ SRH ]</span>
         <input
           class="search-input"
+          id="searchInput"
           type="text"
           placeholder="Rechercher un personnage..."
         />
@@ -80,7 +81,7 @@
  
     <!-- Results meta -->
     <div class="results-meta">
-      <span>Affichage de x / x résultats</span>
+      <span>Affichage de <span id="currentCardNb"></span> / <?=$personnagesCount[0]['total']?> résultats</span>
     </div>
  
     <div class="character-grid">
@@ -116,6 +117,8 @@
     <span>EVA-WIKI &nbsp; Personnel Database</span>
     <span>NERV &nbsp; HQ &nbsp;—&nbsp; Tokyo-3</span>
   </div>
+
+  <script src="js/search-global.js"></script>
 </body>
 
 </html>

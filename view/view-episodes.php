@@ -52,6 +52,7 @@
                 <span class="search-icon">[ SRH ]</span>
                 <input
                     class="search-input"
+                    id="searchInput"
                     type="text"
                     placeholder="Rechercher un épisode..."
                 />
@@ -85,7 +86,7 @@
  
         <!-- Results meta -->
         <div class="results-meta">
-            <span>Affichage de <?= $episodesCount[0]["total"] ?> épisodes</span>
+            <span>Affichage de <span id="currentEpNb"></span> / <?= $episodesCount[0]["total"] ?> épisodes</span>
         </div>
  
         <!-- Episodes list -->
@@ -133,5 +134,7 @@
         <span>EVA-WIKI &nbsp; Broadcast Archives</span>
         <span>NERV &nbsp; HQ &nbsp;—&nbsp; Tokyo-3</span>
     </div>
+
+    <script src="js/search-episodes.js"></script>
 </body>
 </html>
