@@ -1,3 +1,3 @@
 <?php
     require "model/model.php";
-    require "view/view.php";
+    require "view/view-index.php";
