@@ -45,7 +45,6 @@
         <section class="info-hero">
             <div class="info-portrait-card">
                 <div class="info-portrait-frame">
-                    <span class="info-panel-label">Third Child</span>
                     <img src="assets/img/characters/shinji_ikari.png" alt="Portrait de Shinji Ikari" class="info-portrait-image">
                     <div class="info-portrait-gradient"></div>
                     <div class="info-portrait-code">FILE 01</div>
@@ -69,8 +68,8 @@
 
             <div class="info-summary-panel">
                 <div class="info-summary-topline">
-                    <span>Personnel Archive</span>
-                    <span>Classification C-129</span>
+                    <span>Fichiers du personnel</span>
+                    <span>Informations classifiées</span>
                 </div>
 
                 <div class="info-chip-row">
@@ -108,63 +107,6 @@
                     </div>
                 </div>
             </div>
-        </section>
-
-        <section class="info-content-grid">
-            <article class="info-section-card">
-                <div class="info-section-heading">
-                    <span class="info-section-index">01</span>
-                    <h2>Description</h2>
-                </div>
-                <p class="info-section-text">
-                    Le design de Shinji repose sur une silhouette simple, une palette discrete et une expression retenue, en contraste avec la violence mecanique et symbolique de l'univers Evangelion. Son image communique immediatement une vulnerabilite qui devient un axe majeur de la mise en scene.
-                </p>
-                <p class="info-section-text">
-                    En interface, cette fiche le positionne comme un sujet d'etude plus qu'un simple hero, avec une presentation inspiree d'un dossier d'archives NERV: terminologie technique, blocs de donnees, etiquettes fonctionnelles et image centrale fortement cadree.
-                </p>
-            </article>
-
-            <article class="info-section-card">
-                <div class="info-section-heading">
-                    <span class="info-section-index">02</span>
-                    <h2>Profil rapide</h2>
-                </div>
-                <div class="info-stat-list">
-                    <div class="info-stat-row">
-                        <span class="info-stat-name">Role narratif</span>
-                        <span class="info-stat-detail">Protagoniste / pilote central</span>
-                    </div>
-                    <div class="info-stat-row">
-                        <span class="info-stat-name">Organisation</span>
-                        <span class="info-stat-detail">NERV</span>
-                    </div>
-                    <div class="info-stat-row">
-                        <span class="info-stat-name">Unite associee</span>
-                        <span class="info-stat-detail">Evangelion Unit-01</span>
-                    </div>
-                    <div class="info-stat-row">
-                        <span class="info-stat-name">Relations clefs</span>
-                        <span class="info-stat-detail">Gendo, Misato, Rei, Asuka</span>
-                    </div>
-                    <div class="info-stat-row">
-                        <span class="info-stat-name">Theme dominant</span>
-                        <span class="info-stat-detail">Isolement et acceptation de soi</span>
-                    </div>
-                </div>
-            </article>
-
-            <article class="info-section-card info-quote-card">
-                <div class="info-section-heading">
-                    <span class="info-section-index">03</span>
-                    <h2>Signature</h2>
-                </div>
-                <blockquote class="info-quote">
-                    "Je ne dois pas fuir."
-                </blockquote>
-                <p class="info-section-text">
-                    Une courte phrase, mais essentielle pour la lecture du personnage: elle resume sa lutte interieure entre repli, devoir et survie emotionnelle.
-                </p>
-            </article>
         </section>
     </main>
 
