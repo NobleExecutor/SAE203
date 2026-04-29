@@ -39,7 +39,7 @@
  
     <!-- Page header -->
     <header class="page-header">
-      <p class="page-header-label">BDD &nbsp;/&nbsp; Fichiers des anges</p>
+      <p class="page-header-label">BDD / Fichiers des anges</p>
       <h1 class="page-header-title">
         Anges
         <span class="jp">天使たち</span>
@@ -104,8 +104,8 @@
  
   <!-- Bottom bar -->
   <div class="bottom-bar">
-    <span>EVA-WIKI &nbsp; Personnel Database</span>
-    <span>NERV &nbsp; HQ &nbsp;—&nbsp; Tokyo-3</span>
+    <span>EVA-WIKI Fichiers des anges</span>
+    <span>NERV HQ — Tokyo-3</span>
   </div>
 
   <script src="js/search-global.js"></script>

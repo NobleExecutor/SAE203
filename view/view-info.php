@@ -34,7 +34,7 @@
     <main class="info-page">
         <header class="page-header info-header">
             <div>
-                <p class="page-header-label">BDD &nbsp;/&nbsp; Fiche personnage</p>
+                <p class="page-header-label">BDD / Fiche personnage</p>
                 <h1 class="page-header-title">
                     Shinji Ikari
                     <span class="jp">碇シンジ</span>
@@ -112,8 +112,8 @@
     </main>
 
     <div class="bottom-bar">
-        <span>EVA-WIKI &nbsp; Personnel Database</span>
-        <span>NERV &nbsp; HQ &nbsp;—&nbsp; Tokyo-3</span>
+        <span>EVA-WIKI >Fiche informations détaillées</span>
+        <span>NERV HQ — Tokyo-3</span>
     </div>
 </body>
 

@@ -40,7 +40,7 @@
  
         <!-- Page header -->
         <header class="page-header">
-            <p class="page-header-label">BDD &nbsp;/&nbsp; Archives de diffusion</p>
+            <p class="page-header-label">BDD / Archives de diffusion</p>
             <h1 class="page-header-title">
                 Episodes
                 <span class="jp">エピソード</span>
@@ -69,19 +69,19 @@
             </label>
             <label>
                 <input class="filter-checkbox" type="checkbox" name="arc" value="arc-1">
-                <span class="filter-btn">Ep. 01–06</span>
+                <span class="filter-btn">Ep. 01-06</span>
             </label>
             <label>
                 <input class="filter-checkbox" type="checkbox" name="arc" value="arc-2">
-                <span class="filter-btn">Ep. 07–13</span>
+                <span class="filter-btn">Ep. 07-13</span>
             </label>
             <label>
                 <input class="filter-checkbox" type="checkbox" name="arc" value="arc-3">
-                <span class="filter-btn">Ep. 14–19</span>
+                <span class="filter-btn">Ep. 14-19</span>
             </label>
             <label>
                 <input class="filter-checkbox" type="checkbox" name="arc" value="arc-4">
-                <span class="filter-btn">Ep. 20–26</span>
+                <span class="filter-btn">Ep. 20-26</span>
             </label>
         </div>
  
@@ -132,8 +132,8 @@
  
     <!-- Bottom bar -->
     <div class="bottom-bar">
-        <span>EVA-WIKI &nbsp; Broadcast Archives</span>
-        <span>NERV &nbsp; HQ &nbsp;—&nbsp; Tokyo-3</span>
+        <span>EVA-WIKI Archives de diffusion</span>
+        <span>NERV HQ — Tokyo-3</span>
     </div>
 
     <script src="js/search-episodes.js"></script>

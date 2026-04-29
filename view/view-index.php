@@ -24,7 +24,7 @@
         <div class="corner corner--br"></div>
 
         <div style="display:flex;flex-direction:column;">
-            <p class="episode-label">Gainax &nbsp;·&nbsp; 1995 &ndash; 1997 &nbsp;·&nbsp; Anno Hideaki</p>
+            <p class="episode-label">Gainax · 1995 — 1997 · Anno Hideaki</p>
 
             <div class="title-block">
                 <div class="word-sm">Neon</div>
@@ -66,8 +66,8 @@
         </div>
 
         <div class="bottom-line">
-            <span>EVA-WIKI &nbsp; >System Initialized</span>
-            <span>NERV &nbsp; HQ &nbsp;—&nbsp; Tokyo-3</span>
+            <span>EVA-WIKI >Système Initialisé</span>
+            <span>NERV HQ — Tokyo-3</span>
         </div>
     </section>
 </body>
