@@ -8,11 +8,8 @@
 
     :root {
         --red: #c0392b;
-        --orange: #e8671a;
         --white: #ffffff;
         --dim: rgba(255, 255, 255, 0.4);
-        --dimmer: rgba(255, 255, 255, 0.15);
-        --card-bg: rgba(255, 255, 255, 0.03);
         --card-border: rgba(255, 255, 255, 0.08);
     }
 
@@ -294,26 +291,6 @@
         color: var(--dim);
     }
 
-    .sort-select {
-        font-family: 'HelveticaNeue', Helvetica, sans-serif;
-        font-size: 0.55rem;
-        letter-spacing: 0.35em;
-        text-transform: uppercase;
-        color: var(--dim);
-        background: transparent;
-        border: 1px solid var(--card-border);
-        padding: 0.4em 0.8em;
-        cursor: pointer;
-        outline: none;
-        appearance: none;
-        -webkit-appearance: none;
-    }
-
-    .sort-select option {
-        background: #111;
-        color: var(--white);
-    }
-
     /* ── CHARACTER GRID ── */
     .character-grid {
         display: grid;
@@ -360,17 +337,6 @@
         transform: scale(1.08);
     }
 
-    /* Unit designation watermark */
-    .card-unit {
-        position: absolute;
-        top: 0.8rem;
-        right: 0.8rem;
-        font-size: 0.5rem;
-        letter-spacing: 0.4em;
-        color: rgba(255, 255, 255, 0.12);
-        text-transform: uppercase;
-    }
-
     /* Hover overlay */
     .card-overlay {
         position: absolute;
@@ -384,22 +350,6 @@
 
     .character-card:hover .card-overlay {
         opacity: 1;
-    }
-
-    /* Bottom scan line on hover */
-    .card-scan {
-        position: absolute;
-        left: 0;
-        right: 0;
-        height: 1px;
-        background: var(--red);
-        opacity: 0;
-        top: 0;
-        transition: none;
-    }
-
-    .character-card:hover .card-scan {
-        opacity: 0.6;
     }
 
     /* Info bar */

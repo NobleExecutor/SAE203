@@ -54,9 +54,8 @@
                     class="search-input"
                     type="text"
                     placeholder="Rechercher un épisode..."
-                    id="searchInput"
                 />
-                <span class="search-count" id="episodeCount"><?= $episodesCount[0]["total"] ?> résultats disponibles</span>
+                <span class="search-count"><?= $episodesCount[0]["total"] ?> résultats disponibles</span>
             </div>
         </div>
  
@@ -86,11 +85,11 @@
  
         <!-- Results meta -->
         <div class="results-meta">
-            <span id="displayMeta">Affichage de <?= $episodesCount[0]["total"] ?> épisodes</span>
+            <span>Affichage de <?= $episodesCount[0]["total"] ?> épisodes</span>
         </div>
  
         <!-- Episodes list -->
-        <div class="episodes-list" id="episodesList">
+        <div class="episodes-list">
  
             <?php
                 $allEpisodes = getAllEpisodes();
@@ -102,8 +101,6 @@
                     <span class="ep-label">EP</span>
                     <span class="ep-num"><?= $episode['id_ep'] ?></span>
                 </div>
- 
-                <div class="episode-divider"></div>
  
                 <div class="episode-titles">
                     <div class="episode-title-jp"><?= $episode['titre_japonais'] ?></div>

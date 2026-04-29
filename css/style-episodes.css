@@ -74,15 +74,6 @@
     color: rgba(255, 255, 255, 0.35);
 }
 
-/* Vertical divider (decorative) */
-.episode-divider {
-    width: 1px;
-    background: var(--card-border);
-    align-self: stretch;
-    flex-shrink: 0;
-    display: none; /* already handled by border-right on ep-number */
-}
-
 /* Titles block */
 .episode-titles {
     flex: 1;
