@@ -76,7 +76,7 @@
  
     <!-- Results meta -->
     <div class="results-meta">
-      <span>x / x résultats</span>
+      <span>Affichage de x / x résultats</span>
       <select class="sort-select">
         <option>Sort — Name A/Z</option>
         <option>Sort — Name Z/A</option>

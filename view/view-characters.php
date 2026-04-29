@@ -80,7 +80,7 @@
  
     <!-- Results meta -->
     <div class="results-meta">
-      <span>Showing x of x records</span>
+      <span>Affichage de x / x résultats</span>
       <select class="sort-select">
         <option>Tri — Nom A/Z</option>
         <option>Tri — Nom Z/A</option>
