@@ -66,7 +66,15 @@
         <section class="info-hero">
             <div class="info-portrait-card">
                 <div class="info-portrait-frame">
-                    <img src="assets/img/characters/shinji_ikari.png" alt="Portrait de Shinji Ikari" class="info-portrait-image">
+                    <img src="<?php
+                        if ($type === "episode") {
+                            if ($id === "27")
+                                echo "assets/img/eoe.png";
+                            else
+                                echo "assets/img/nge.png";
+                        }
+                        else
+                            echo "";?>" class="info-portrait-image">
                     <div class="info-portrait-gradient"></div>
                     <div class="info-portrait-code">FILE 01</div>
                 </div>
