@@ -1,2 +1,3 @@
 <?php
-    require "controller/controller-character-info.php";
+    $page = "character-info";
+    require "controller/controller.php";

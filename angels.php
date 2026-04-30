@@ -1,2 +1,3 @@
 <?php
-    require "controller/controller-angels.php";
+    $page = "angels";
+    require "controller/controller.php";

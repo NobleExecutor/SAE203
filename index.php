@@ -1,2 +1,3 @@
 <?php
-    require "controller/controller-index.php";
+    $page = "index";
+    require "controller/controller.php";

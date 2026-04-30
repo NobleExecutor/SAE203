@@ -1,2 +1,3 @@
 <?php
-    require "controller/controller-units.php";
+    $page = "units";
+    require "controller/controller.php";

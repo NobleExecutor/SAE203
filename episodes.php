@@ -1,2 +1,3 @@
 <?php
-    require "controller/controller-episodes.php";
+    $page = "episodes";
+    require "controller/controller.php";
