@@ -1,10 +1,10 @@
-/* ── EPISODES LIST ── */
+/* EPISODES LIST */
 .episodes-list {
     border: 1px solid var(--card-border);
     border-bottom: none;
 }
 
-/* ── EPISODE ROW ── */
+/* EPISODE ROW */
 .episode-row {
     display: flex;
     align-items: center;
@@ -159,7 +159,7 @@
     padding: 0.25em 0.7em;
 }
 
-/* Arrow indicator */
+/* Flèche */
 .episode-arrow {
     flex-shrink: 0;
     padding: 0 1.5rem;

@@ -45,7 +45,7 @@ body {
     line-height: 0.92;
 }
 
-/* NEON and GENESIS — smaller */
+/* NEON et GENESIS — smaller */
 .word-sm {
     font-family: 'MatissePro';
     font-size: clamp(2.8rem, 8.5vw, 7rem);
@@ -89,10 +89,6 @@ body {
     height: 1px;
     background: rgba(255, 255, 255, 0.5);
     margin: 1.6rem 0;
-    opacity: 0;
-    animation: expandWidth 0.8s ease forwards 0.4s;
-    transform-origin: left;
-    transform: scaleX(0);
 }
 
 .meta-block {
@@ -186,7 +182,7 @@ body {
 .enter-btn {
     display: inline-block;
     font-family: 'HelveticaNeue', Helvetica, sans-serif;
-    font-size: clamp(0.55rem, 0.8vw, 0.7rem);
+    font-size: 0.7rem;
     letter-spacing: 0.5em;
     text-transform: uppercase;
     color: #fff;
@@ -203,11 +199,4 @@ body {
     background: #fff;
     color: #000;
     border-color: #fff;
-}
-
-@keyframes expandWidth {
-    to {
-        opacity: 1;
-        transform: scaleX(1);
-    }
 }

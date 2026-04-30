@@ -22,7 +22,7 @@
         overflow-x: hidden;
     }
 
-    /* ── SCANLINES (global) ── */
+    /* SCANLINES (global) */
     body::before {
         content: '';
         position: fixed;
@@ -36,7 +36,7 @@
         z-index: 1000;
     }
 
-    /* ── NAV ── */
+    /* NAV */
     nav {
         position: fixed;
         top: 0;
@@ -108,7 +108,7 @@
         background: var(--red);
     }
 
-    /* ── CORNER BRACKETS ── */
+    /* CORNER BRACKETS */
     .corner {
         position: fixed;
         width: 28px;
@@ -144,7 +144,7 @@
         border-right: 1px solid rgba(255, 255, 255, 0.9);
     }
 
-    /* ── MAIN LAYOUT ── */
+    /* MAIN LAYOUT */
     main {
         padding-top: 7rem;
         padding-bottom: 6rem;
@@ -152,7 +152,7 @@
         padding-right: 8vw;
     }
 
-    /* ── PAGE HEADER ── */
+    /* PAGE HEADER */
     .page-header {
         margin-bottom: 3rem;
     }
@@ -182,7 +182,7 @@
         margin-top: 0.4em;
     }
 
-    /* ── SEARCH BAR ── */
+    /* SEARCH BAR */
     .search-wrap {
         margin-bottom: 2rem;
     }
@@ -238,7 +238,7 @@
         flex-shrink: 0;
     }
 
-    /* ── FILTERS ── */
+    /* FILTERS */
     .filters {
         display: flex;
         gap: 0.6rem;
@@ -276,7 +276,7 @@
         border-color: var(--white);
     }
 
-    /* ── RESULTS META ── */
+    /* RESULTS META */
     .results-meta {
         display: flex;
         justify-content: space-between;
@@ -291,7 +291,7 @@
         color: var(--dim);
     }
 
-    /* ── CHARACTER GRID ── */
+    /* CHARACTER GRID */
     .character-grid {
         display: grid;
         grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
@@ -300,7 +300,7 @@
         border: 1px solid var(--card-border);
     }
 
-    /* ── CHARACTER CARD ── */
+    /* CHARACTER CARD */
     .character-card {
         background: #000;
         position: relative;
@@ -325,7 +325,7 @@
         display: block;
     }
 
-    /* Silhouette / image area */
+    /* image area */
     .card-image {
         width: 100%;
         aspect-ratio: 3/4;
@@ -407,7 +407,7 @@
         padding: 0.25em 0.6em;
     }
 
-    /* ── BOTTOM BAR ── */
+    /* BOTTOM BAR */
     .bottom-bar {
         position: fixed;
         bottom: 0;

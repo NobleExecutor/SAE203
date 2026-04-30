@@ -14,7 +14,7 @@ function connexionBDD() {
   return $database;
 }
 
-// Fonction qui retourne le nombre d'occurences dans une table passé en paramètre
+// Fonction qui retourne le nombre d'occurences dans une table passée en paramètre
 function getTableTotal($table) {
   $database = connexionBDD();
 
