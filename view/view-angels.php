@@ -74,7 +74,7 @@
 
       foreach($allAngels as $angel) {
     ?>
-        <a class="character-card" href="info.php?type=angel&id=<?= $angel['num']?>">
+        <a class="character-card" href="angel-info.php?id=<?= $angel['num']?>">
             <div class="card-image">
               <img src="assets/img/angels/<?=$angel['img']?>" alt="<?= $angel['nom']?>">
               <div class="card-overlay"></div>

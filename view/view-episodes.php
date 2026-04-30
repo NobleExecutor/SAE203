@@ -94,7 +94,7 @@
                 $allEpisodes = getAllEntries($query);
                 foreach ($allEpisodes as $episode) {
             ?>
-            <a class="episode-row arc-<?= $episode['arc'] ?>" href="info.php?type=episode&id=<?= $episode['id_ep'] ?>">
+            <a class="episode-row arc-<?= $episode['arc'] ?>" href="episode-info.php?id=<?= $episode['id_ep'] ?>">
  
                 <div class="episode-number">
                     <span class="ep-label">EP</span>

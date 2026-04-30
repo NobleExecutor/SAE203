@@ -97,7 +97,7 @@
           $filtres[] = "autre";
     ?>
         <!-- implode permet d'assembler les éléments du tableau en ajoutant un caractère ou une chaine de caractère (ici, un espace) -->
-        <a class="character-card <?= implode(' ', $filtres) ?>" href="info.php?type=unit&id=<?= $unit['id_unit']?>">
+        <a class="character-card <?= implode(' ', $filtres) ?>" href="unit-info.php?id=<?= $unit['id_unit']?>">
             <div class="card-image">
               <img src="assets/img/units/<?=$unit['img_unit']?>" alt="<?= $unit['nom_unit']?>">
               <div class="card-overlay"></div>
