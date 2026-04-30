@@ -36,42 +36,11 @@ function getUnitTotal() {
   return $result;
 }
 
-// Fonction qui retourne tous les personnages et certaines de leurs infos
-function getAllCharacters() {
+// Fonction qui retourne un set de données basé sur une requète passée en paramètre
+function getAllEntries($query) {
   $database = connexionBDD();
 
-  $req = $database->query("SELECT * FROM personnages;");
-  $result = $req->FetchAll(PDO::FETCH_ASSOC);
-
-  $database = null;
-  return $result;
-}
-
-
-function getAllUnits() {
-  $database = connexionBDD();
-
-  $req = $database->query("SELECT DISTINCT id_unit, nom_unit, img_unit, ame_unit FROM personnages WHERE nom_unit IS NOT NULL ORDER BY id_unit ASC;");
-  $result = $req->FetchAll(PDO::FETCH_ASSOC);
-
-  $database = null;
-  return $result;
-}
-
-function getAllAngels() {
-  $database = connexionBDD();
-
-  $req = $database->query("SELECT * FROM anges ORDER BY num ASC;");
-  $result = $req->FetchAll(PDO::FETCH_ASSOC);
-
-  $database = null;
-  return $result;
-}
-
-function getAllEpisodes() {
-  $database = connexionBDD();
-
-  $req = $database->query("SELECT id_ep, titre, titre_japonais, DATE_FORMAT(air_date, '%d %M %Y') AS date, arc FROM episodes ORDER BY id_ep ASC;");
+  $req = $database->query($query);
   $result = $req->FetchAll(PDO::FETCH_ASSOC);
 
   $database = null;

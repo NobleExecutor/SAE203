@@ -1,5 +1,6 @@
 <?php
   $unitsCount = getUnitTotal();
+  $query = "SELECT DISTINCT id_unit, nom_unit, img_unit, ame_unit FROM personnages WHERE nom_unit IS NOT NULL ORDER BY id_unit ASC;";
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -83,7 +84,7 @@
     <div class="character-grid">
  
     <?php
-      $allUnits = getAllUnits();
+      $allUnits = getAllEntries($query);
 
       foreach($allUnits as $unit) {
         $filtres = array();

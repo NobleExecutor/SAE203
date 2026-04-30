@@ -1,5 +1,6 @@
 <?php
   $episodesCount = getTableTotal($table = "episodes");
+  $query = "SELECT id_ep, titre, titre_japonais, DATE_FORMAT(air_date, '%d %M %Y') AS date, arc FROM episodes ORDER BY id_ep ASC;";
 ?>
  
 <!DOCTYPE html>
@@ -90,7 +91,7 @@
         <div class="episodes-list">
  
             <?php
-                $allEpisodes = getAllEpisodes();
+                $allEpisodes = getAllEntries($query);
                 foreach ($allEpisodes as $episode) {
             ?>
             <a class="episode-row arc-<?= $episode['arc'] ?>" href="info.php?type=episode&id=<?= $episode['id_ep'] ?>">

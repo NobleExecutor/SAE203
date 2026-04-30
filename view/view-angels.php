@@ -1,5 +1,6 @@
 <?php
   $angelsCount = getTableTotal($table = "anges");
+  $query = "SELECT * FROM anges ORDER BY num ASC;";
 ?>
 
 <!DOCTYPE html>
@@ -69,7 +70,7 @@
     <div class="character-grid">
  
     <?php
-      $allAngels = getAllAngels();
+      $allAngels = getAllEntries($query);
 
       foreach($allAngels as $angel) {
     ?>

@@ -1,5 +1,6 @@
 <?php
   $personnagesCount = getTableTotal($table = "personnages");
+  $query = "SELECT * FROM personnages;";
 ?>
 
 <!DOCTYPE html>
@@ -88,7 +89,7 @@
     <div class="character-grid">
 
     <?php
-      $allCharacters = getAllCharacters();
+      $allCharacters = getAllEntries($query);
 
       foreach($allCharacters as $character) {
         $tags = array();
