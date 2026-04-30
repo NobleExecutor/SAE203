@@ -313,6 +313,20 @@
         border-collapse: collapse;
     }
 
+    .character-grid.filter-active .character-card {
+        display: none;
+    }
+
+    .character-grid.filtrePilote .character-card.pilote,
+    .character-grid.filtreNerv .character-card.nerv,
+    .character-grid.filtreSeele .character-card.seele,
+    .character-grid.filtreCivil .character-card.civil,
+    .character-grid.filtreYui .character-card.yui,
+    .character-grid.filtreKyoko .character-card.kyoko,
+    .character-grid.filtreAutre .character-card.autre {
+        display: block;
+    }
+
     /* Silhouette / image area */
     .card-image {
         width: 100%;

@@ -71,7 +71,7 @@ function getAllAngels() {
 function getAllEpisodes() {
   $database = connexionBDD();
 
-  $req = $database->query("SELECT id_ep, titre, titre_japonais, DATE_FORMAT(air_date, '%d %M %Y') AS date FROM episodes ORDER BY id_ep ASC;");
+  $req = $database->query("SELECT id_ep, titre, titre_japonais, DATE_FORMAT(air_date, '%d %M %Y') AS date, arc FROM episodes ORDER BY id_ep ASC;");
   $result = $req->FetchAll(PDO::FETCH_ASSOC);
 
   $database = null;

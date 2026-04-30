@@ -62,19 +62,15 @@
     <!-- Filters -->
     <div class="filters">
       <label>
-        <input class="filter-checkbox" type="checkbox" checked>
-        <span class="filter-btn">Tout</span>
-      </label>
-      <label>
-        <input class="filter-checkbox" type="checkbox">
+        <input class="filter-checkbox" type="checkbox" name="filtreYui" id="yui">
         <span class="filter-btn">Yui</span>
       </label>
       <label>
-        <input class="filter-checkbox" type="checkbox">
+        <input class="filter-checkbox" type="checkbox" name="filtreKyoko" id="kyoko">
         <span class="filter-btn">Kyoko</span>
       </label>
       <label>
-        <input class="filter-checkbox" type="checkbox">
+        <input class="filter-checkbox" type="checkbox" name="filtreAutre" id="autre">
         <span class="filter-btn">Autre</span>
       </label>
     </div>
@@ -84,15 +80,23 @@
       <span>Affichage de <span id="currentCardNb"></span> / <?=$unitsCount[0]['total']?> résultats</span>
     </div>
  
-    <!-- Placeholder, à changer -->
     <div class="character-grid">
  
     <?php
       $allUnits = getAllUnits();
 
       foreach($allUnits as $unit) {
+        $filtres = array();
+
+        if ($unit['ame_unit'] == "Yui Ikari")
+          $filtres[] = "yui";
+        else if ($unit['ame_unit'] == "Kyoko Zeppelin Sohryu")
+          $filtres[] = "kyoko";
+        else
+          $filtres[] = "autre";
     ?>
-        <a class="character-card" href="info.php?type=unit&id=<?= $unit['id_unit']?>">
+        <!-- implode permet d'assembler les éléments du tableau en ajoutant un caractère ou une chaine de caractère (ici, un espace) -->
+        <a class="character-card <?= implode(' ', $filtres) ?>" href="info.php?type=unit&id=<?= $unit['id_unit']?>">
             <div class="card-image">
               <img src="assets/img/units/<?=$unit['img_unit']?>" alt="<?= $unit['nom_unit']?>">
               <div class="card-overlay"></div>
@@ -100,9 +104,6 @@
           <div class="card-info">
             <div class="card-name-jp">Ame de <?= $unit['ame_unit']?></div>
             <div class="card-name-en"><?= $unit['nom_unit']?></div>
-            <div class="card-tags">
-              <span class="card-tag">Placeholder tag</span>
-            </div>
           </div>
         </a>
     <?php
@@ -120,6 +121,7 @@
   </div>
 
   <script src="js/search-global.js"></script>
+  <script src="js/filter.js"></script>
 </body>
 
 </html>

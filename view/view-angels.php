@@ -60,14 +60,6 @@
       </div>
     </div>
  
-    <!-- Filters -->
-    <div class="filters">
-      <label>
-        <input class="filter-checkbox" type="checkbox" checked>
-        <span class="filter-btn">Tout</span>
-      </label>
-    </div>
- 
     <!-- Results meta -->
     <div class="results-meta">
       <span>Affichage de <span id="currentCardNb"></span> / <?=$angelsCount[0]['total']?> résultats</span>

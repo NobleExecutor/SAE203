@@ -63,20 +63,20 @@
     <!-- Filters -->
     <div class="filters">
       <label>
-        <input class="filter-checkbox" type="checkbox" checked>
-        <span class="filter-btn">Tout</span>
-      </label>
-      <label>
-        <input class="filter-checkbox" type="checkbox">
+        <input class="filter-checkbox" type="checkbox" name="filtrePilote" id="pilote">
         <span class="filter-btn">Pilote</span>
       </label>
       <label>
-        <input class="filter-checkbox" type="checkbox">
+        <input class="filter-checkbox" type="checkbox" name="filtreNerv" id="nerv">
         <span class="filter-btn">NERV</span>
       </label>
       <label>
-        <input class="filter-checkbox" type="checkbox">
+        <input class="filter-checkbox" type="checkbox" name="filtreSeele" id="seele">
         <span class="filter-btn">SEELE</span>
+      </label>
+      <label>
+        <input class="filter-checkbox" type="checkbox" name="filtreCivil" id="civil">
+        <span class="filter-btn">Civil</span>
       </label>
     </div>
  
@@ -91,8 +91,20 @@
       $allCharacters = getAllCharacters();
 
       foreach($allCharacters as $character) {
+        $tags = array();
+
+        // Vérification des tags
+        if ($character['nerv'] == 1)
+          $tags[] = "nerv";
+        if ($character['seele'] == 1)
+          $tags[] = "seele";
+        if ($character['pilote'] == 1)
+          $tags[] = "pilote";
+        if ($character['civil'] == 1)
+          $tags[] = "civil";
     ?>
-        <a class="character-card" href="info.php?type=character&id=<?= $character['id']?>">
+        <!-- implode permet d'assembler les éléments du tableau en ajoutant un caractère ou une chaine de caractère (ici, un espace) -->
+        <a class="character-card <?= implode(' ', $tags) ?>" href="info.php?type=character&id=<?= $character['id']?>">
             <div class="card-image">
               <img src="assets/img/characters/<?=$character['img']?>" alt="<?= $character['nom']?>">
               <div class="card-overlay"></div>
@@ -101,7 +113,9 @@
             <div class="card-name-jp"><?= $character['nom_japonais']?></div>
             <div class="card-name-en"><?= $character['nom']?></div>
             <div class="card-tags">
-              <span class="card-tag">Placeholder tag</span>
+              <?php foreach ($tags as $tag) { ?>
+                <span class="card-tag"><?= $tag ?></span>
+              <?php } ?>
             </div>
           </div>
         </a>
@@ -120,6 +134,7 @@
   </div>
 
   <script src="js/search-global.js"></script>
+  <script src="js/filter.js"></script>
 </body>
 
 </html>

@@ -64,10 +64,6 @@
         <!-- Filters (arcs) -->
         <div class="filters">
             <label>
-                <input class="filter-checkbox" type="checkbox" name="arc" value="all" checked>
-                <span class="filter-btn">Tout</span>
-            </label>
-            <label>
                 <input class="filter-checkbox" type="checkbox" name="arc" value="arc-1">
                 <span class="filter-btn">Ep. 01-06</span>
             </label>
@@ -97,7 +93,7 @@
                 $allEpisodes = getAllEpisodes();
                 foreach ($allEpisodes as $episode) {
             ?>
-            <a class="episode-row" href="info.php?type=episode&id=<?= $episode['id_ep'] ?>">
+            <a class="episode-row arc-<?= $episode['arc'] ?>" href="info.php?type=episode&id=<?= $episode['id_ep'] ?>">
  
                 <div class="episode-number">
                     <span class="ep-label">EP</span>
@@ -115,7 +111,7 @@
                         <span class="meta-value"><?= $episode['date'] ?></span>
                     </div>
                     <div class="episode-arc">
-                        <span class="arc-tag"><?= $episode['arc_label'] ?></span>
+                        <span class="arc-tag">Arc N°<?= $episode['arc'] ?></span>
                     </div>
                 </div>
  
@@ -137,5 +133,6 @@
     </div>
 
     <script src="js/search-episodes.js"></script>
+    <script src="js/filter-episodes.js"></script>
 </body>
 </html>
