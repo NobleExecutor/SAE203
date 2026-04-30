@@ -99,7 +99,7 @@
           $tags[] = "civil";
     ?>
         <!-- implode permet d'assembler les éléments du tableau en ajoutant un caractère ou une chaine de caractère (ici, un espace) -->
-        <a class="character-card <?= implode(' ', $tags) ?>" href="character-info.php?&id=<?= $character['id']?>">
+        <a class="character-card <?= implode(' ', $tags) ?>" href="character-info.php?id=<?= $character['id']?>">
             <div class="card-image">
               <img src="assets/img/characters/<?=$character['img']?>" alt="<?= $character['nom']?>">
               <div class="card-overlay"></div>
