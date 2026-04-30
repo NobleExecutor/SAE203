@@ -2,6 +2,9 @@
     // On récupère les paramètres dans l'URL grâce à GET pour savoir quoi afficher ensuite
     $id = $_GET['id'] ?? "";
     // L'opérateur '??' permet de dire: "Si le paramètre GET existe dans l'URL, alors $type prendra sa valeur, sinon $type sera vide"
+
+    $query = "SELECT id, nom, nom_japonais, age, DATE_FORMAT(date_de_naissance, '%d %M %Y') AS date, description, pilote, nerv, seele, civil, img, id_unit, nom_unit, ame_unit, img_unit FROM personnages WHERE id = '$id';";
+    $currentCharacter = getAllEntries($query);
 ?>
 
 <!DOCTYPE html>
@@ -41,14 +44,10 @@
         <header class="page-header info-header">
             <div>
                 <p class="page-header-label">BDD / Fiche
-                <?php
-                    $query = "SELECT id, nom, nom_japonais, age, DATE_FORMAT(date_de_naissance, '%d %M %Y') AS date, description, pilote, nerv, seele, civil, img, id_unit, nom_unit, ame_unit, img_unit FROM personnages WHERE id = '$id';";
-                    $currentInfo = getAllEntries($query);
-                ?>
                 </p>
                 <h1 class="page-header-title">
-                    <?= $currentInfo[0]['nom'] ?>
-                    <span class="jp"><?= $currentInfo[0]['nom_japonais'] ?></span>
+                    <?= $currentCharacter[0]['nom'] ?>
+                    <span class="jp"><?= $currentCharacter[0]['nom_japonais'] ?></span>
                 </h1>
             </div>
             <a class="info-back-link" href="characters.php">Retour a la liste</a>
@@ -57,7 +56,7 @@
             <section class="info-hero">
             <div class="info-portrait-card">
                 <div class="info-portrait-frame">
-                    <img src="<?php echo "assets/img/characters/" . $currentInfo[0]['img'];?>" class="info-portrait-image">
+                    <img src="<?php echo "assets/img/characters/" . $currentCharacter[0]['img'];?>" class="info-portrait-image">
                     <div class="info-portrait-gradient"></div>
                     <div class="info-portrait-code">FILE 01</div>
                 </div>
@@ -70,25 +69,25 @@
                 </div>
 
                 <div class="info-summary-copy">
-                    <p><?= $currentInfo[0]['description'] ?></p>
+                    <p><?= $currentCharacter[0]['description'] ?></p>
                 </div>
 
                 <div class="info-data-grid">
                     <div class="info-data-card">
                         <span class="info-data-label">Nom complet</span>
-                        <strong class="info-data-value"><?= $currentInfo[0]['nom'] ?></strong>
+                        <strong class="info-data-value"><?= $currentCharacter[0]['nom'] ?></strong>
                     </div>
                     <div class="info-data-card">
                         <span class="info-data-label">Nom japonais</span>
-                        <strong class="info-data-value"><?= $currentInfo[0]['nom_japonais'] ?></strong>
+                        <strong class="info-data-value"><?= $currentCharacter[0]['nom_japonais'] ?></strong>
                     </div>
                     <div class="info-data-card">
                         <span class="info-data-label">Age</span>
-                        <strong class="info-data-value"><?= $currentInfo[0]['age'] === null ? "Inconnu" : $currentInfo[0]['age'] . " ans" ?></strong>
+                        <strong class="info-data-value"><?= $currentCharacter[0]['age'] === null ? "Inconnu" : $currentCharacter[0]['age'] . " ans" ?></strong>
                     </div>
                     <div class="info-data-card">
                         <span class="info-data-label">Date de naissance</span>
-                        <strong class="info-data-value"><?= $currentInfo[0]['date'] ?></strong>
+                        <strong class="info-data-value"><?= $currentCharacter[0]['date'] === null ? "Inconnu" : $currentCharacter[0]['date'] ?></strong>
                     </div>
                 </div>
             </div>
