@@ -1,3 +1,10 @@
+<?php
+    // On récupère les paramètres dans l'URL grâce à GET pour savoir quoi afficher ensuite
+    $type = $_GET['type'] ?? "";
+    $id = $_GET['id'] ?? "";
+    // L'opérateur '??' permet de dire: "Si le paramètre GET existe dans l'URL, alors $type prendra sa valeur, sinon $type sera vide"
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -19,10 +26,11 @@
         </a>
         <ul class="nav-links">
             <li><a href="index.php">Home</a></li>
-            <li><a href="characters.php" class="active">Personnages</a></li>
-            <li><a href="episodes.php">Episodes</a></li>
-            <li><a href="units.php">Unités EVA</a></li>
-            <li><a href="angels.php">Anges</a></li>
+            <!-- Ici, on vérifie dynamiquement le contenu de $type pour pouvoir ajouter une classe au bon lien de la nav bar. La notation $type === "type" ? "active" : "" est une façon d'écrire une instruction if en une ligne, plus pratique et plus lisible pour le code -->
+            <li><a href="characters.php" class="<?= $type === "character" ? "active" : "" ?>">Personnages</a></li>
+            <li><a href="episodes.php" class="<?= $type === "episode" ? "active" : "" ?>">Episodes</a></li>
+            <li><a href="units.php" class="<?= $type === "unit" ? "active" : "" ?>">Unités EVA</a></li>
+            <li><a href="angels.php" class="<?= $type === "angel" ? "active" : "" ?>">Anges</a></li>
         </ul>
     </nav>
 
@@ -34,13 +42,25 @@
     <main class="info-page">
         <header class="page-header info-header">
             <div>
-                <p class="page-header-label">BDD / Fiche personnage</p>
+                <p class="page-header-label">BDD / Fiche
+                <?php
+                    // Ici on affiche dynamiquement de quel type de fiche il s'agit en fonction du paramètre $type
+                    if ($type === "character")
+                        echo "personnage";
+                    if ($type === "unit")
+                        echo "unité EVA";
+                    if ($type === "angel")
+                        echo "ange";
+                    if ($type === "episode")
+                        echo "épisode";
+                ?>
+                </p>
                 <h1 class="page-header-title">
                     Shinji Ikari
                     <span class="jp">碇シンジ</span>
                 </h1>
             </div>
-            <a class="info-back-link" href="characters.php">Retour a la liste</a>
+            <a class="info-back-link" href="<?= $type ?>s.php">Retour a la liste</a>
         </header>
 
         <section class="info-hero">
