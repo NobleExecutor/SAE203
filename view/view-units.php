@@ -103,7 +103,7 @@
               <div class="card-overlay"></div>
             </div>
           <div class="card-info">
-            <div class="card-name-jp">Ame de <?= $unit['ame_unit']?></div>
+            <div class="card-name-jp">Ame de <?= $unit['ame_unit'] === null ? "??" : $unit['ame_unit']?></div>
             <div class="card-name-en"><?= $unit['nom_unit']?></div>
           </div>
         </a>
