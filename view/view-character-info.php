@@ -35,11 +35,6 @@
         </ul>
     </nav>
 
-    <div class="corner corner--tl"></div>
-    <div class="corner corner--tr"></div>
-    <div class="corner corner--bl"></div>
-    <div class="corner corner--br"></div>
-
     <main class="info-page">
         <header class="page-header info-header">
             <div>
