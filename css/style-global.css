@@ -309,8 +309,6 @@
         text-decoration: none;
         display: block;
         min-width: 0;
-        border: .5px solid black;
-        border-collapse: collapse;
     }
 
     .character-grid.filter-active .character-card {
