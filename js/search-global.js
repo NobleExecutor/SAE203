@@ -9,6 +9,9 @@ document.addEventListener("DOMContentLoaded", () => {
     search.addEventListener("input", () => {
         // On récupère le contenu de la barre de recherche et on le converti en minuscule pour faciliter la comparaison
         let searchContent = search.value.toLowerCase();
+        // Pour afficher le nombre d'éléments actuellement sur l'écran
+        currentCardNb = 0;
+
         characterCards.forEach(card => {
             // On récupère le nom de la carte actuellement traité pour la comparer à la recherche en cours
             const name = card.querySelector(".card-name-en").textContent.toLowerCase();
@@ -17,17 +20,9 @@ document.addEventListener("DOMContentLoaded", () => {
             }
             else {
                 card.style.display = "";
-            }
-        });
-
-        // Pour afficher le nombre d'éléments actuellement sur l'écran
-        currentCardNb = 0;
-        characterCards.forEach(card => {
-            if (window.getComputedStyle(card).display !== "none") {
                 currentCardNb++;
             }
         });
-
         cardNb.textContent = currentCardNb;
     });
 });
