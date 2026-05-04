@@ -46,3 +46,17 @@ function getAllEntries($query) {
   $database = null;
   return $result;
 }
+
+function addComment($pseudo, $commentaire) {
+  $database = connexionBDD();
+
+  $req = $database->exec("INSERT INTO commentaires (id_commentaire, pseudo, commentaire, date)
+  VALUES (NULL, '$pseudo', '$commentaire', NOW());");
+  // NOW() permet de stocker la date et le temps exact à laquelle la requête est faite
+
+  if ($req == 1)
+    echo "Insertion réussie";
+  else
+    echo "Erreur lors d'insertion de l'article";
+  $database = null;
+  }

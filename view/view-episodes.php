@@ -1,4 +1,15 @@
 <?php
+  // Traitement du formulaire d'envoi de commentaire
+  if (isset($_POST['clic'])) {
+    $pseudo = $_POST['username'];
+    $commentaire = $_POST['comment'];
+
+    addComment($pseudo, $commentaire);
+  }
+
+  $commentsQuery = "SELECT id_commentaire, pseudo, commentaire, DATE_FORMAT(date, '%d/%m/%Y\, %H:%i') AS date FROM commentaires;";
+  $allComments = getAllEntries($commentsQuery);
+
   $episodesCount = getTableTotal($table = "episodes");
   $query = "SELECT id_ep, titre, titre_japonais, DATE_FORMAT(air_date, '%d %M %Y') AS date, arc FROM episodes ORDER BY id_ep ASC;";
 ?>
@@ -17,6 +28,45 @@
 </head>
  
 <body>
+    <aside class="comments-container">
+      <div class="comments-panel">
+        <div class="comments-panel-head">
+          <p class="comments-panel-label">Terminal / Commentaires</p>
+          <h2>Commentaires</h2>
+        </div>
+
+        <div class="comments-thread">
+          <?php
+            foreach($allComments as $comment) {
+          ?>
+          <div class="comment-card">
+            <div class="comment-card-head">
+              <span class="comment-author"><?= $comment['pseudo'] ?></span>
+              <span class="comment-date"><?= $comment['date'] ?></span>
+            </div>
+            <p class="comment-body"><?= $comment['commentaire'] ?></p>
+          </div>
+          <?php
+            }
+          ?>
+        </div>
+
+        <form class="comments-form" action="<?= $_SERVER['PHP_SELF'] ?>" method="POST">
+          <label for="pseudo" class="comments-form-label">Pseudonyme</label>
+          <input type="text" id="pseudo" name="username" class="comments-input" placeholder="Votre pseudonyme..." maxlength="15" required>
+
+          <label class="comments-form-label" for="commentMessage">Commentaire</label>
+          <textarea id="commentMessage" name="comment" class="comments-input" placeholder="Ecrire un commentaire..." required></textarea>
+
+          <button type="submit" name="clic" class="comments-submit">Publier</button>
+        </form>
+      </div>
+    </aside>
+
+    <button class="comments-container-btn" type="button">
+      <img src="assets/svg/message.svg" id="btnSvg">
+    </button>
+
     <nav>
         <a class="nav-logo" href="index.php">
             <span class="nav-logo-top">Neon Genesis</span>
@@ -129,5 +179,6 @@
 
     <script src="js/search-episodes.js"></script>
     <script src="js/filter-episodes.js"></script>
+    <script src="js/comments.js"></script>
 </body>
 </html>

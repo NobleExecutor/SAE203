@@ -22,6 +22,22 @@
         overflow-x: hidden;
     }
 
+    /* SCROLLBAR */
+    /* la scrollbar par défaut faisait tache avec la palette de couleur utilisée, j'ai donc décidé de la rendre transparente */
+
+    ::-webkit-scrollbar {
+    width: 8px;
+    }
+
+    ::-webkit-scrollbar-track {
+        background: transparent;
+    }
+
+    ::-webkit-scrollbar-thumb {
+        background: rgba(255, 255, 255, 0.25);
+        border-radius: 999px;
+    }
+
     /* SCANLINES (global) */
     body::before {
         content: '';
@@ -34,6 +50,193 @@
                 rgba(0, 0, 0, 0.07) 4px);
         pointer-events: none;
         z-index: 1000;
+    }
+
+    /* COMMENTS */
+    .comments-container {
+        position: fixed;
+        top: 0;
+        right: 0;
+        width: min(28rem, 100vw);
+        height: 100vh;
+        padding: 1.5rem;
+        background: rgba(0, 0, 0, 0.82);
+        backdrop-filter: blur(14px);
+        border-left: 1px solid var(--card-border);
+        z-index: 9500;
+        transition: transform 0.25s ease, opacity 0.25s ease;
+        transform: translateX(100%);
+        opacity: 0;
+        pointer-events: none;
+    }
+
+    .comments-container.opened {
+        transform: translateX(0);
+        opacity: 1;
+        pointer-events: auto;
+    }
+
+    .comments-panel {
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        gap: 1.25rem;
+        padding: 1.5rem;
+        background:
+            linear-gradient(180deg, rgba(192, 57, 43, 0.1), rgba(255, 255, 255, 0.02)),
+            rgba(10, 10, 10, 0.96);
+        border: 1px solid rgba(255, 255, 255, 0.1);
+        box-shadow: -16px 0 40px rgba(0, 0, 0, 0.35);
+    }
+
+    .comments-panel-head h2 {
+        font-size: 1.4rem;
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+        margin-bottom: 0.4rem;
+    }
+
+    .comments-panel-label,
+    .comment-date,
+    .comments-form-label {
+        font-size: 0.6rem;
+        letter-spacing: 0.28em;
+        text-transform: uppercase;
+        color: var(--red);
+    }
+
+    .comments-panel-copy {
+        color: var(--dim);
+        font-size: 0.78rem;
+        line-height: 1.6;
+        max-width: 30ch;
+    }
+
+    .comments-thread {
+        display: flex;
+        flex-direction: column;
+        gap: 0.8rem;
+        flex: 1;
+        overflow-y: auto;
+        padding-right: 0.35rem;
+
+    }
+
+    .comments-thread::-webkit-scrollbar {
+    width: 8px;
+    }
+
+    .comments-thread::-webkit-scrollbar-track {
+        background: transparent;
+    }
+
+    .comments-thread::-webkit-scrollbar-thumb {
+        background: rgba(255, 255, 255, 0.25);
+        border-radius: 999px;
+    }
+
+
+    .comment-card {
+        padding: 1rem;
+        border: 1px solid rgba(255, 255, 255, 0.08);
+        background: rgba(255, 255, 255, 0.03);
+    }
+
+    .comment-card-head {
+        display: flex;
+        justify-content: space-between;
+        gap: 1rem;
+        margin-bottom: 0.7rem;
+    }
+
+    .comment-author {
+        font-size: 0.82rem;
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+    }
+
+    .comment-body {
+        color: rgba(255, 255, 255, 0.82);
+        font-size: 0.82rem;
+        line-height: 1.6;
+    }
+
+    .comments-form {
+        display: flex;
+        flex-direction: column;
+        gap: 0.8rem;
+    }
+
+    input.comments-input {
+        width: 100%;
+        min-height: 2rem;
+        border: 1px solid rgba(255, 255, 255, 0.14);
+        background: rgba(255, 255, 255, 0.03);
+        color: var(--white);
+        font: inherit;
+        padding: 0.9rem 1rem;
+        outline: none;
+    }
+
+    textarea.comments-input {
+        width: 100%;
+        resize: vertical;
+        min-height: 7rem;
+        border: 1px solid rgba(255, 255, 255, 0.14);
+        background: rgba(255, 255, 255, 0.03);
+        color: var(--white);
+        font: inherit;
+        padding: 0.9rem 1rem;
+        outline: none;
+    }
+
+    .comments-input:focus {
+        border-color: rgba(192, 57, 43, 0.75);
+    }
+
+    .comments-input::placeholder {
+        color: rgba(255, 255, 255, 0.22);
+        letter-spacing: 0.1em;
+    }
+
+    .comments-submit {
+        align-self: flex-start;
+        border: 1px solid rgba(192, 57, 43, 0.75);
+        background: rgba(192, 57, 43, 0.14);
+        color: var(--white);
+        padding: 0.8rem 1.2rem;
+        font-family: 'HelveticaNeue', Helvetica, sans-serif;
+        font-size: 0.72rem;
+        letter-spacing: 0.25em;
+        text-transform: uppercase;
+        cursor: pointer;
+        transition: background 0.2s ease, border-color 0.2s ease;
+    }
+
+    .comments-submit:hover {
+        background: rgba(192, 57, 43, 0.24);
+        border-color: var(--red);
+    }
+
+    .comments-container-btn {
+        position: fixed;
+        right: 2rem;
+        bottom: 2rem;
+        width: 4.5rem;
+        height: 4.5rem;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        border: 1px solid rgba(255, 255, 255, 0.12);
+        border-radius: 999px;
+        background: rgba(0, 0, 0, 0.88);
+        cursor: pointer;
+        z-index: 10002;
+        transition: right 0.25s ease, transform 0.25s ease;
+    }
+
+    .comments-container.opened+.comments-container-btn {
+        right: calc(min(28rem, 100vw) + 2rem);
     }
 
     /* NAV */
