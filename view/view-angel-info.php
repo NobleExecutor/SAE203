@@ -1,9 +1,9 @@
 <?php
     // On récupère les paramètres dans l'URL grâce à GET pour savoir quoi afficher ensuite
-    $id = (int) ($_GET['id'] ?? 0);
+    $id = $_GET['id'] ?? 0;
     // L'opérateur '??' permet de dire: "Si le paramètre GET existe dans l'URL, alors $type prendra sa valeur, sinon $type sera vide"
     
-    $query = "SELECT * FROM anges LEFT JOIN tue ON anges.nom = tue.nom_ange WHERE num = $id;";
+    $query = "SELECT * FROM anges INNER JOIN tue ON anges.nom = tue.nom_ange WHERE id_ange = $id;";
     $currentAngel = getAllEntries($query);
 ?>
 
@@ -83,7 +83,7 @@
                     </div>
                     <div class="info-data-card">
                         <span class="info-data-label">Ange N°</span>
-                        <strong class="info-data-value"><?= $currentAngel[0]['num'] ?></strong>
+                        <strong class="info-data-value"><?= $currentAngel[0]['id_ange'] ?></strong>
                     </div>
                 </div>
             </div>

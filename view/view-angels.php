@@ -1,6 +1,6 @@
 <?php
   $angelsCount = getTableTotal($table = "anges");
-  $query = "SELECT * FROM anges ORDER BY num ASC;";
+  $query = "SELECT * FROM anges ORDER BY id_ange ASC;";
 ?>
 
 <!DOCTYPE html>
@@ -68,7 +68,7 @@
 
       foreach($allAngels as $angel) {
     ?>
-        <a class="character-card" href="angel-info.php?id=<?= $angel['num']?>">
+        <a class="character-card" href="angel-info.php?id=<?= $angel['id_ange']?>">
             <div class="card-image">
               <img src="assets/img/angels/<?=$angel['img']?>" alt="<?= $angel['nom']?>">
               <div class="card-overlay"></div>
@@ -77,7 +77,7 @@
             <div class="card-name-jp"><?= $angel['nom_japonais']?></div>
             <div class="card-name-en"><?= $angel['nom']?></div>
             <div class="card-tags">
-              <span class="card-tag">Ange N°<?= $angel['num']?></span>
+              <span class="card-tag">Ange N°<?= $angel['id_ange']?></span>
             </div>
           </div>
         </a>
