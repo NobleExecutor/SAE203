@@ -20,9 +20,17 @@ document.addEventListener("DOMContentLoaded", () => {
             }
             else {
                 episode.style.display = "";
+            }
+        });
+
+        // Pour afficher le nombre d'éléments actuellement sur l'écran en vérifiant si l'attribut CSS display à une valeur ou non
+        currentEpNb = 0;
+        episodeRows.forEach(episode => {
+            if (window.getComputedStyle(episode).display !== "none") {
                 currentEpNb++;
             }
         });
+
         epNb.textContent = currentEpNb;
     });
 });
