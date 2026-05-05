@@ -3,6 +3,7 @@
   if (isset($_POST['clic'])) {
     $pseudo = $_POST['username'];
     $commentaire = $_POST['comment'];
+  // pas de 'else' étant donné que j'ai ajouté l'attribut 'required' aux inputs
 
     addComment($pseudo, $commentaire);
   }
