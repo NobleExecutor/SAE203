@@ -70,6 +70,11 @@
       <span class="nav-logo-top">Neon Genesis</span>
       <span class="nav-logo-main">Evangelion</span>
     </a>
+    <button class="nav-burger" type="button" aria-label="Toggle menu">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
     <ul class="nav-links">
       <li><a href="index.php">Home</a></li>
       <li><a href="characters.php">Personnages</a></li>
@@ -168,6 +173,7 @@
   <script src="js/search-global.js"></script>
   <script src="js/filter.js"></script>
   <script src="js/comments.js"></script>
+  <script src="js/burger.js"></script>
 </body>
 
 </html>

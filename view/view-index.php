@@ -23,7 +23,7 @@
         <div class="corner corner--bl"></div>
         <div class="corner corner--br"></div>
 
-        <div style="display:flex;flex-direction:column;">
+        <div class="title-inner">
             <p class="episode-label">Gainax · 1995 — 1997 · Anno Hideaki</p>
 
             <div class="title-block">
@@ -70,6 +70,7 @@
             <span>NERV HQ — Tokyo-3</span>
         </div>
     </section>
+
 </body>
 
 </html>

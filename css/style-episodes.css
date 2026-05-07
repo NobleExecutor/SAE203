@@ -7,7 +7,7 @@
 /* EPISODE ROW */
 .episode-row {
     display: flex;
-    align-items: center;
+    align-items: stretch;
     gap: 0;
     padding: 0;
     border-bottom: 1px solid var(--card-border);
@@ -15,8 +15,8 @@
     color: inherit;
     transition: background 0.2s;
     position: relative;
-    overflow: hidden;
     min-height: 5rem;
+    padding-right: 1.5rem;
 }
 
 .episode-row::before {
@@ -30,6 +30,7 @@
     transform: scaleY(0);
     transition: transform 0.2s ease;
     transform-origin: center;
+    z-index: 1;
 }
 
 .episode-row:hover::before {
@@ -61,7 +62,6 @@
     width: 6rem;
     padding: 1.5rem 1rem;
     border-right: 1px solid var(--card-border);
-    align-self: stretch;
     gap: 0.1rem;
 }
 
@@ -90,6 +90,10 @@
     flex: 1;
     padding: 1.4rem 2rem;
     min-width: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 0.4rem;
 }
 
 .episode-title-jp {
@@ -97,7 +101,6 @@
     font-size: 0.7rem;
     color: rgba(255, 255, 255, 0.3);
     letter-spacing: 0.05em;
-    margin-bottom: 0.4rem;
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
@@ -116,18 +119,20 @@
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
+    padding-right: 1rem;
 }
 
 /* Meta block (date + arc) */
 .episode-meta {
-    width: 20%;
     flex-shrink: 0;
     display: flex;
     flex-direction: column;
     align-items: flex-end;
+    justify-content: center;
     gap: 0.6rem;
     padding: 1.4rem 2rem;
     border-left: 1px solid var(--card-border);
+    min-width: 10rem;
 }
 
 .episode-date {
@@ -159,9 +164,11 @@
     padding: 0.25em 0.7em;
 }
 
-/* Flèche */
+/* Arrow */
 .episode-arrow {
     flex-shrink: 0;
+    display: flex;
+    align-items: center;
     padding: 0 1.5rem;
     font-size: 0.8rem;
     color: rgba(255, 255, 255, 0.1);
@@ -171,4 +178,176 @@
 .episode-row:hover .episode-arrow {
     color: var(--red);
     transform: translateX(4px);
+}
+
+/* ========== RESPONSIVE ========== */
+
+/* Tablets */
+@media (max-width: 1024px) {
+    .episode-number {
+        width: 5rem;
+        padding: 1rem 0.8rem;
+    }
+
+    .ep-num {
+        font-size: 1.3rem;
+    }
+
+    .episode-titles {
+        padding: 1.2rem 1.5rem;
+    }
+
+    .episode-meta {
+        min-width: 8rem;
+        padding: 1.2rem 1.5rem;
+    }
+
+    .episode-arrow {
+        padding: 0 1rem;
+    }
+}
+
+/* Mobile landscape / small tablets */
+@media (max-width: 768px) {
+    .episode-row {
+        flex-wrap: wrap;
+        min-height: auto;
+    }
+
+    .episode-number {
+        width: 4rem;
+        padding: 0.8rem 0.6rem;
+    }
+
+    .ep-label {
+        font-size: 0.35rem;
+    }
+
+    .ep-num {
+        font-size: 1.1rem;
+    }
+
+    .episode-titles {
+        flex: 1 1 0;
+        padding: 0.8rem 1rem;
+    }
+
+    .episode-title-jp {
+        font-size: 0.6rem;
+    }
+
+    .episode-title-fr {
+        font-size: 0.7rem;
+    }
+
+    .episode-meta {
+        width: 100%;
+        flex-direction: row;
+        align-items: center;
+        justify-content: flex-start;
+        border-left: none;
+        border-top: 1px solid var(--card-border);
+        padding: 0.6rem 0;
+        gap: 1rem;
+        min-width: 0;
+        flex-wrap: wrap;
+    }
+
+    .episode-date {
+        flex-direction: row;
+        align-items: center;
+        gap: 0.5rem;
+    }
+
+    .episode-arrow {
+        padding: 0 1rem;
+    }
+}
+
+/* Mobile phones */
+@media (max-width: 480px) {
+    .episode-row {
+        flex-direction: column;
+        align-items: stretch;
+        padding: 0.8rem;
+        gap: 0.3rem;
+    }
+
+    .episode-number {
+        flex-direction: row;
+        width: 100%;
+        border-right: none;
+        border-bottom: 1px solid var(--card-border);
+        padding: 0.5rem 0;
+        gap: 0.5rem;
+        align-items: center;
+    }
+
+    .ep-label {
+        font-size: 0.32rem;
+    }
+
+    .ep-num {
+        font-size: 1rem;
+    }
+
+    .episode-titles {
+        width: 100%;
+        padding: 0.5rem 0;
+        gap: 0.3rem;
+    }
+
+    .episode-title-jp {
+        font-size: 0.55rem;
+        margin-bottom: 0;
+    }
+
+    .episode-title-fr {
+        font-size: 0.65rem;
+    }
+
+    .episode-meta {
+        width: 100%;
+        flex-direction: row;
+        flex-wrap: wrap;
+        padding: 0.5rem 0;
+        gap: 0.5rem;
+    }
+
+    .meta-label {
+        font-size: 0.38rem;
+    }
+
+    .meta-value {
+        font-size: 0.55rem;
+    }
+
+    .arc-tag {
+        font-size: 0.38rem;
+        padding: 0.2em 0.5em;
+    }
+
+    .episode-arrow {
+        display: none;
+    }
+}
+
+/* Very small phones */
+@media (max-width: 360px) {
+    .episode-row {
+        padding: 0.6rem;
+    }
+
+    .episode-titles {
+        padding: 0.4rem 0;
+    }
+
+    .episode-title-fr {
+        font-size: 0.6rem;
+        letter-spacing: 0.1em;
+    }
+
+    .episode-meta {
+        gap: 0.3rem;
+    }
 }

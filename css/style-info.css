@@ -2,17 +2,17 @@
     /* CHARACTER DETAIL PAGE */
     html,
     body {
-        height: 100%;
-        overflow: hidden;
+        min-height: 100%;
+        overflow-x: hidden;
     }
 
     .info-page {
-        height: 100vh;
+        min-height: 100dvh;
         padding-top: 5.25rem;
         padding-bottom: 3.5rem;
         display: flex;
         flex-direction: column;
-        overflow: hidden;
+        overflow-x: hidden;
     }
 
     .info-header {
@@ -175,4 +175,189 @@
         display: flex;
         flex-direction: column;
         gap: 0.5rem;
+    }
+
+    /* ========== RESPONSIVE ========== */
+
+    /* Tablets */
+    @media (max-width: 1024px) {
+        .info-hero {
+            grid-template-columns: minmax(220px, 350px) minmax(0, 1fr);
+        }
+
+        .info-summary-panel {
+            padding: 1.2rem;
+            gap: 1.2rem;
+        }
+
+        .info-portrait-image {
+            width: min(100%, 280px);
+        }
+
+        .info-data-grid {
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+        }
+    }
+
+    /* Mobile landscape / small tablets */
+    @media (max-width: 768px) {
+        .info-page {
+            height: auto;
+            overflow: auto;
+            padding-top: 4.5rem;
+            padding-bottom: 3rem;
+        }
+
+        html,
+        body {
+            height: auto;
+            overflow: auto;
+        }
+
+        .info-header {
+            flex-direction: column;
+            align-items: flex-start;
+            gap: 1rem;
+            margin-bottom: 1rem;
+        }
+
+        .info-back-link {
+            font-size: 0.5rem;
+            padding: 0.7rem 1rem;
+        }
+
+        .info-hero {
+            grid-template-columns: 1fr;
+            grid-template-rows: auto 1fr;
+        }
+
+        .info-portrait-card {
+            max-height: 50vh;
+        }
+
+        .info-portrait-image {
+            width: min(100%, 240px);
+        }
+
+        .info-summary-panel {
+            padding: 1rem;
+            gap: 1rem;
+            overflow: visible;
+        }
+
+        .info-summary-copy p {
+            font-size: 0.85rem;
+            line-height: 1.7;
+        }
+
+        .info-data-grid {
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+        }
+
+        .info-data-card {
+            padding: 0.8rem;
+        }
+
+        .info-data-value {
+            font-size: 0.65rem;
+        }
+    }
+
+    /* Mobile phones */
+    @media (max-width: 480px) {
+        .info-page {
+            padding-top: 4rem;
+            padding-bottom: 2.5rem;
+        }
+
+        .info-header {
+            gap: 0.8rem;
+            margin-bottom: 0.8rem;
+        }
+
+        .info-back-link {
+            font-size: 0.45rem;
+            padding: 0.6rem 0.8rem;
+            letter-spacing: 0.2em;
+        }
+
+        .info-hero {
+            border: none;
+            background: transparent;
+            gap: 1px;
+        }
+
+        .info-portrait-card {
+            max-height: 40vh;
+        }
+
+        .info-portrait-frame {
+            min-height: 200px;
+        }
+
+        .info-portrait-image {
+            width: min(100%, 200px);
+        }
+
+        .info-portrait-code {
+            font-size: 0.38rem;
+            right: 0.5rem;
+            bottom: 0.5rem;
+        }
+
+        .info-summary-panel {
+            padding: 0.8rem;
+            gap: 0.8rem;
+        }
+
+        .info-summary-topline {
+            flex-direction: column;
+            gap: 0.3rem;
+            font-size: 0.45rem;
+            padding-bottom: 0.8rem;
+        }
+
+        .info-summary-copy p {
+            font-size: 0.82rem;
+            line-height: 1.6;
+        }
+
+        .info-data-grid {
+            grid-template-columns: 1fr;
+        }
+
+        .info-data-card {
+            padding: 0.7rem;
+        }
+
+        .info-data-label {
+            font-size: 0.42rem;
+        }
+
+        .info-data-value {
+            font-size: 0.6rem;
+        }
+    }
+
+    /* Very small phones */
+    @media (max-width: 360px) {
+        .info-portrait-card {
+            max-height: 35vh;
+        }
+
+        .info-portrait-frame {
+            min-height: 160px;
+        }
+
+        .info-portrait-image {
+            width: min(100%, 160px);
+        }
+
+        .info-summary-copy p {
+            font-size: 0.78rem;
+        }
+
+        .info-data-grid {
+            grid-template-columns: 1fr;
+        }
     }
