@@ -1,9 +1,11 @@
 <?php
     // On récupère les paramètres dans l'URL grâce à GET pour savoir quoi afficher ensuite
-    $id = $_GET['id'] ?? 0;
-    // L'opérateur '??' permet de dire: "Si le paramètre GET existe dans l'URL, alors $type prendra sa valeur, sinon $type sera vide"
+    if (isset($_GET['id']))
+        $id = $_GET['id'];
+    else
+        $id = 0;
     
-    $query = "SELECT * FROM anges INNER JOIN tue ON anges.nom = tue.nom_ange WHERE id_ange = $id;";
+    $query = "SELECT a.id_ange, a.nom AS nom_ange, a.nom_japonais, a.img, a.description, t.id_personnage, t.mort, p.nom AS nom_personnage FROM anges a LEFT JOIN tue t ON a.id_ange = t.id_ange LEFT JOIN personnages p ON t.id_personnage = p.id_personnage WHERE a.id_ange = $id;";
     $currentAngel = getAllEntries($query);
 ?>
 
@@ -41,7 +43,7 @@
                 <p class="page-header-label">BDD / Fiche Ange
                 </p>
                 <h1 class="page-header-title">
-                    <?= $currentAngel[0]['nom'] ?>
+                    <?= $currentAngel[0]['nom_ange'] ?>
                     <span class="jp"><?= $currentAngel[0]['nom_japonais'] ?></span>
                 </h1>
             </div>
@@ -71,7 +73,7 @@
                 <div class="info-data-grid">
                     <div class="info-data-card">
                         <span class="info-data-label">Nom complet</span>
-                        <strong class="info-data-value"><?= $currentAngel[0]['nom'] ?></strong>
+                        <strong class="info-data-value"><?= $currentAngel[0]['nom_ange'] ?></strong>
                     </div>
                     <div class="info-data-card">
                         <span class="info-data-label">Nom japonais</span>

@@ -1,7 +1,9 @@
 <?php
     // On récupère les paramètres dans l'URL grâce à GET pour savoir quoi afficher ensuite
-    $id = $_GET['id'] ?? 0;
-    // L'opérateur '??' permet de dire: "Si le paramètre GET existe dans l'URL, alors $type prendra sa valeur, sinon $type sera vide"
+    if (isset($_GET['id']))
+        $id = $_GET['id'];
+    else
+        $id = 0;
 
     $query = "SELECT id_personnage, nom, nom_japonais, age, DATE_FORMAT(date_de_naissance, '%d %M %Y') AS date, description, pilote, nerv, seele, civil, img, id_unit, nom_unit, ame_unit, img_unit FROM personnages WHERE id_personnage = '$id';";
     $currentCharacter = getAllEntries($query);
