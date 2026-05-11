@@ -47,6 +47,7 @@ function getAllEntries($query) {
   return $result;
 }
 
+// Fonction qui permet d'ajouter un commentaire à la base de données
 function addComment($pseudo, $commentaire) {
   $database = connexionBDD();
 
