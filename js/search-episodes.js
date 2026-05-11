@@ -9,9 +9,6 @@ document.addEventListener("DOMContentLoaded", () => {
     search.addEventListener("input", () => {
         // On récupère le contenu de la barre de recherche et on le converti en minuscule pour faciliter la comparaison
         let searchContent = search.value.toLowerCase();
-        // Pour afficher le nombre d'éléments actuellement sur l'écran
-        currentEpNb = 0;
-
         episodeRows.forEach(episode => {
             // On récupère le nom de la carte actuellement traité pour la comparer à la recherche en cours
             const name = episode.querySelector(".episode-title-fr").textContent.toLowerCase();
