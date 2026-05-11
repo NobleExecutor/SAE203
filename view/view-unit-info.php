@@ -40,10 +40,7 @@
             <div>
                 <p class="page-header-label">BDD / Fiche des unités EVA
                 </p>
-                <h1 class="page-header-title">
-                    <?= $currentUnit[0]['nom_unit'] ?>
-                    <span class="jp"><?= $currentUnit[0]['nom_japonais'] ?></span>
-                </h1>
+                <h1 class="page-header-title"><?= $currentUnit[0]['nom_unit'] ?></h1>
             </div>
             <a class="info-back-link" href="units.php">Retour a la liste</a>
         </header>
