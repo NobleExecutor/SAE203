@@ -1,9 +1,7 @@
 <?php
     // On récupère les paramètres dans l'URL grâce à GET pour savoir quoi afficher ensuite
-    if (isset($_GET['id']))
-        $id = $_GET['id'];
-    else
-        $id = 0;
+    $id = $_GET['id'] ?? 0;
+    // L'opérateur de coalescence nulle (??) permet de vérifier si une variable est nulle ou non, ça remplace une vérification par isset()
     
     $query = "SELECT a.id_ange, a.nom AS nom_ange, a.nom_japonais, a.img, a.description, a.mort, t.id_personnage, p.nom AS nom_personnage FROM anges a LEFT JOIN tue t ON a.id_ange = t.id_ange LEFT JOIN personnages p ON t.id_personnage = p.id_personnage WHERE a.id_ange = $id;";
     $currentAngel = getAllEntries($query);

@@ -1,9 +1,7 @@
 <?php
     // On récupère les paramètres dans l'URL grâce à GET pour savoir quoi afficher ensuite
-    if (isset($_GET['id']))
-        $id = $_GET['id'];
-    else
-        $id = 0;
+    $id = $_GET['id'] ?? 0;
+    // L'opérateur de coalescence nulle (??) permet de vérifier si une variable est nulle ou non, ça remplace une vérification par isset()
 
     $query = "SELECT id_personnage, nom, nom_japonais, age, DATE_FORMAT(date_de_naissance, '%d %M %Y') AS date, description, pilote, nerv, seele, civil, img, id_unit, nom_unit, ame_unit, img_unit FROM personnages WHERE id_personnage = '$id';";
     $currentCharacter = getAllEntries($query);
