@@ -45,7 +45,7 @@
               <span class="comment-author"><?= $comment['pseudo'] ?></span>
               <span class="comment-date"><?= $comment['date'] ?></span>
             </div>
-            <p class="comment-body"><?= $comment['commentaire'] ?></p>
+            <p class="comment-body"><?= nl2br($comment['commentaire']) ?></p>
           </div>
           <?php
             }
