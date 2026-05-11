@@ -3,7 +3,7 @@
     $id = $_GET['id'] ?? 0;
     // L'opérateur de coalescence nulle (??) permet de vérifier si une variable est nulle ou non, ça remplace une vérification par isset()
 
-    $query = "SELECT id_ep, nom_ange, titre, titre_japonais, DATE_FORMAT(air_date, '%d %M %Y') AS date, arc, description FROM episodes WHERE id_ep = $id;";
+    $query = "SELECT e.id_ep, e.id_ange, a.nom, e.titre, e.titre_japonais, DATE_FORMAT(air_date, '%d %M %Y') AS date, e.arc, e.description FROM episodes e LEFT JOIN anges a ON e.id_ange = a.id_ange WHERE id_ep = $id;";
     $currentEpisode = getAllEntries($query);
 ?>
 
@@ -82,7 +82,7 @@
                     </div>
                     <div class="info-data-card">
                         <span class="info-data-label">Ange apparu</span>
-                        <strong class="info-data-value"><?= $currentEpisode[0]['nom_ange'] === null ? "Aucun" : $currentEpisode[0]['nom_ange'] ?></strong>
+                        <strong class="info-data-value"><?= $currentEpisode[0]['id_ange'] == 0 ? "Aucun" : $currentEpisode[0]['nom'] ?></strong>
                     </div>
                 </div>
             </div>
