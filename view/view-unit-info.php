@@ -51,7 +51,7 @@
             <section class="info-hero">
             <div class="info-portrait-card">
                 <div class="info-portrait-frame">
-                    <img src="assets/img/units/<?= $currentUnit[0]['img_unit'] ;?>" class="info-portrait-image">
+                    <img src="assets/img/units/<?= $currentUnit[0]['img_unit'] ;?>" alt="Portrait de <?= $currentUnit[0]['nom_unit'] ?>" class="info-portrait-image">
                     <div class="info-portrait-gradient"></div>
                     <div class="info-portrait-code">FILE 01</div>
                 </div>
