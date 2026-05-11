@@ -148,7 +148,7 @@
  
                 <div class="episode-titles">
                     <div class="episode-title-jp"><?= $episode['titre_japonais'] ?></div>
-                    <div class="episode-title-fr"><?= $episode['titre'] ?></div>
+                    <div class="episode-title-en"><?= $episode['titre'] ?></div>
                 </div>
  
                 <div class="episode-meta">

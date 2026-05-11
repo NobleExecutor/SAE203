@@ -11,7 +11,7 @@ document.addEventListener("DOMContentLoaded", () => {
         let searchContent = search.value.toLowerCase();
         episodeRows.forEach(episode => {
             // On récupère le nom de la carte actuellement traité pour la comparer à la recherche en cours
-            const name = episode.querySelector(".episode-title-fr").textContent.toLowerCase();
+            const name = episode.querySelector(".episode-title-en").textContent.toLowerCase();
             if (!name.includes(searchContent)) {
                 episode.style.display = "none";
             }
