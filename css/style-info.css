@@ -70,9 +70,6 @@ body {
     display: flex;
     align-items: flex-end;
     justify-content: center;
-    background:
-        radial-gradient(circle at top, rgba(192, 57, 43, 0.16), transparent 48%),
-        linear-gradient(180deg, rgba(255, 255, 255, 0.03), rgba(255, 255, 255, 0.01));
     overflow: hidden;
 }
 
@@ -98,15 +95,6 @@ body {
     object-fit: contain;
     z-index: 1;
     filter: contrast(1.05);
-}
-
-.info-portrait-gradient {
-    position: absolute;
-    inset: 0;
-    background:
-        linear-gradient(to top, rgba(0, 0, 0, 0.78), transparent 42%),
-        linear-gradient(to right, rgba(0, 0, 0, 0.42), transparent 24%, transparent 76%, rgba(0, 0, 0, 0.42));
-    pointer-events: none;
 }
 
 .info-data-label {

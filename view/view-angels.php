@@ -121,7 +121,6 @@
         <a class="character-card" href="angel-info.php?id=<?= $angel['id_ange']?>">
             <div class="card-image">
               <img src="assets/img/angels/<?=$angel['img']?>" alt="<?= $angel['nom']?>">
-              <div class="card-overlay"></div>
             </div>
           <div class="card-info">
             <div class="card-name-jp"><?= $angel['nom_japonais']?></div>

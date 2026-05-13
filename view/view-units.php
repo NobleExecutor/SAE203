@@ -144,7 +144,6 @@
         <a class="character-card <?= implode(' ', $filtres) ?>" href="unit-info.php?id=<?= $unit['id_unit']?>">
             <div class="card-image">
               <img src="assets/img/units/<?=$unit['img_unit']?>" alt="<?= $unit['nom_unit']?>">
-              <div class="card-overlay"></div>
             </div>
           <div class="card-info">
             <div class="card-name-jp">Ame de <?= $unit['ame_unit'] === null ? "??" : $unit['ame_unit']?></div>

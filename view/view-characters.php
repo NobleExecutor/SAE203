@@ -152,7 +152,6 @@
         <a class="character-card <?= implode(' ', $tags) ?>" href="character-info.php?id=<?= $character['id_personnage']?>">
             <div class="card-image">
               <img src="assets/img/characters/<?=$character['img']?>" alt="<?= $character['nom']?>">
-              <div class="card-overlay"></div>
             </div>
           <div class="card-info">
             <div class="card-name-jp"><?= $character['nom_japonais']?></div>

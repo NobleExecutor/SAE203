@@ -517,21 +517,6 @@ main {
     transform: scale(1.08);
 }
 
-/* Hover overlay */
-.card-overlay {
-    position: absolute;
-    inset: 0;
-    background: linear-gradient(to top,
-            rgba(192, 57, 43, 0.15) 0%,
-            transparent 50%);
-    opacity: 0;
-    transition: opacity 0.3s ease;
-}
-
-.character-card:hover .card-overlay {
-    opacity: 1;
-}
-
 /* Info bar */
 .card-info {
     padding: 0.9rem 1rem;

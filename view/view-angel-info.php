@@ -52,7 +52,6 @@
             <div class="info-portrait-card">
                 <div class="info-portrait-frame">
                     <img src="assets/img/angels/<?= $currentAngel[0]['img']; ?>" alt="Portrait de <?= $currentAngel[0]['nom_ange'] ?>" class="info-portrait-image">
-                    <div class="info-portrait-gradient"></div>
                     <div class="info-portrait-code">FILE 01</div>
                 </div>
             </div>
