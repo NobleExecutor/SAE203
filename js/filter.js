@@ -6,10 +6,6 @@ filters.forEach(filter => {
 });
 
 function toggleFilter() {
-    if (!characterGrid) {
-        return;
-    }
-
     const activeFilters = Array.from(filters).filter(filter => filter.checked);
 
     characterGrid.classList.toggle("filter-active", activeFilters.length > 0);

@@ -6,10 +6,6 @@ filters.forEach(filter => {
 });
 
 function toggleFilter() {
-    if (!episodesList) {
-        return;
-    }
-
     const activeFilters = Array.from(filters).filter(filter => filter.checked);
 
     episodesList.classList.toggle("filter-active", activeFilters.length > 0);

@@ -55,9 +55,10 @@ function addComment($pseudo, $commentaire) {
   VALUES (NULL, '$pseudo', '$commentaire', NOW());");
   // NOW() permet de stocker la date et le temps exact à laquelle la requête est faite
 
+  // On echo une balise script pour pouvoir log le résultat de la requête dans la console (plus pratique)
   if ($req == 1)
-    echo "Insertion réussie";
+    echo "<script>console.log('Insertion dans la BDD réussie')</script>";
   else
-    echo "Erreur lors d'insertion de l'article";
+    echo "<script>console.log('Erreur lors de l'insertion du commentaire dans la BDD')</script>";
   $database = null;
   }
