@@ -17,7 +17,5 @@ function toggleFilter() {
     const searchInput = document.getElementById("searchInput");
 
     // Permet de remettre à jour le compteur d'éléments affichés
-    if (searchInput) {
-        searchInput.dispatchEvent(new Event("input"));
-    }
+    countCards();
 }   
