@@ -118,7 +118,7 @@ body {
     flex-direction: column;
     gap: 1.5rem;
     min-height: 0;
-    overflow: hidden;
+    overflow-y: auto;
 }
 
 .info-summary-topline {
