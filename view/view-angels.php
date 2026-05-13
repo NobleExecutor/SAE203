@@ -101,7 +101,7 @@
           type="text"
           placeholder="Rechercher un ange..."
         />
-        <span class="search-count"><?= $angelsCount[0]["total"] ?> résultats disponibles</span>
+        <span class="search-count"><?= $angelsCount[0]['total'] ?> résultats disponibles</span>
       </div>
     </div>
  

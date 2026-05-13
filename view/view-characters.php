@@ -101,7 +101,7 @@
           type="text"
           placeholder="Rechercher un personnage..."
         />
-        <span class="search-count"><?= $personnagesCount[0]["total"] ?> résultats disponibles</span>
+        <span class="search-count"><?= $personnagesCount[0]['total'] ?> résultats disponibles</span>
       </div>
     </div>
  

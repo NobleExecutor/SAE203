@@ -100,7 +100,7 @@
           type="text"
           placeholder="Rechercher une unité EVA..."
         />
-        <span class="search-count"><?= $unitsCount[0]["total"] ?> résultats disponibles</span>
+        <span class="search-count"><?= $unitsCount[0]['total'] ?> résultats disponibles</span>
       </div>
     </div>
  

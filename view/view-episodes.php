@@ -103,7 +103,7 @@
                     type="text"
                     placeholder="Rechercher un épisode..."
                 />
-                <span class="search-count"><?= $episodesCount[0]["total"] ?> résultats disponibles</span>
+                <span class="search-count"><?= $episodesCount[0]['total'] ?> résultats disponibles</span>
             </div>
         </div>
  
@@ -129,7 +129,7 @@
  
         <!-- Results meta -->
         <div class="results-meta">
-            <span>Affichage de <span id="currentEpNb"></span> / <?= $episodesCount[0]["total"] ?> épisodes</span>
+            <span>Affichage de <span id="currentEpNb"></span> / <?= $episodesCount[0]['total'] ?> épisodes</span>
         </div>
  
         <!-- Episodes list -->
