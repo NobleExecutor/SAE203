@@ -55,7 +55,7 @@ body {
     display: flex;
     align-items: center;
     justify-content: flex-start;
-    padding-left: 128px;
+    padding-left: var(--space-14);
     background: var(--black);
     position: relative;
 }
@@ -98,18 +98,18 @@ body {
 
 .episode-label {
     font-family: 'HelveticaNeue', Helvetica, sans-serif;
-    font-size: 12px;
+    font-size: var(--font-size-base);
     letter-spacing: var(--letter-spacing-5);
     text-transform: uppercase;
     color: rgba(255, 255, 255, 0.4);
-    margin-bottom: 26px;
+    margin-bottom: var(--space-6);
 }
 
 .divider {
     width: 100px;
     height: 1px;
     background: rgba(255, 255, 255, 0.5);
-    margin: 26px 0;
+    margin: var(--space-6) 0;
 }
 
 .meta-block {
@@ -121,12 +121,12 @@ body {
 .meta-row {
     display: flex;
     align-items: baseline;
-    gap: 18px;
+    gap: var(--space-4);
 }
 
 .meta-label {
     font-family: 'HelveticaNeue', Helvetica, sans-serif;
-    font-size: 10px;
+    font-size: var(--font-size-sm);
     letter-spacing: var(--letter-spacing-5);
     text-transform: uppercase;
     color: rgba(255, 255, 255, 0.35);
@@ -135,7 +135,7 @@ body {
 
 .meta-value {
     font-family: 'HelveticaNeue', Helvetica, sans-serif;
-    font-size: 12px;
+    font-size: var(--font-size-base);
     letter-spacing: var(--letter-spacing-1);
     color: rgba(255, 255, 255, 0.8);
 }
@@ -189,7 +189,7 @@ body {
 
 .bottom-line span {
     font-family: 'HelveticaNeue', Helvetica, sans-serif;
-    font-size: 9px;
+    font-size: var(--font-size-sm);
     letter-spacing: var(--letter-spacing-2);
     color: rgba(255, 255, 255, 0.4);
     text-transform: uppercase;
@@ -214,7 +214,7 @@ body {
     text-transform: uppercase;
     color: var(--white);
     border: 1px solid rgba(255, 255, 255, 0.3);
-    padding: 10px 24px;
+    padding: var(--space-3) var(--space-6);
     cursor: pointer;
     text-decoration: none;
     background: transparent;

@@ -62,18 +62,18 @@
     padding: var(--space-6) var(--space-4);
     border-right: 1px solid var(--card-border);
     align-self: stretch;
-    gap: 2px;
+    gap: var(--space-1);
 }
 
 .ep-label {
-    font-size: 6px;
+    font-size: var(--font-size-xs);
     letter-spacing: var(--letter-spacing-3);
     color: var(--red);
     text-transform: uppercase;
 }
 
 .ep-num {
-    font-size: 26px;
+    font-size: var(--font-size-3xl);
     letter-spacing: 1px;
     color: rgba(255, 255, 255, 0.15);
     font-weight: 700;
@@ -87,16 +87,16 @@
 /* Titles block */
 .episode-titles {
     flex: 1;
-    padding: 22px var(--space-7);
+    padding: var(--space-6) var(--space-7);
     min-width: 0;
 }
 
 .episode-title-jp {
     font-family: 'MatissePro', serif;
-    font-size: 11px;
+    font-size: var(--font-size-base);
     color: rgba(255, 255, 255, 0.3);
     letter-spacing: 1px;
-    margin-bottom: 6px;
+    margin-bottom: var(--space-2);
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
@@ -108,7 +108,7 @@
 }
 
 .episode-title-en {
-    font-size: 13px;
+    font-size: var(--font-size-lg);
     letter-spacing: var(--letter-spacing-1);
     text-transform: uppercase;
     color: var(--white);
@@ -124,8 +124,8 @@
     display: flex;
     flex-direction: column;
     align-items: flex-end;
-    gap: 10px;
-    padding: 22px var(--space-7);
+    gap: var(--space-3);
+    padding: var(--space-6) var(--space-7);
     border-left: 1px solid var(--card-border);
 }
 
@@ -155,7 +155,7 @@
     text-transform: uppercase;
     color: rgba(255, 255, 255, 0.3);
     border: 1px solid rgba(255, 255, 255, 0.1);
-    padding: var(--space-1) 10px;
+    padding: var(--space-1) var(--space-3);
 }
 
 /* Flèche */

@@ -8,7 +8,7 @@ body {
 
 .info-page {
     height: 100%;
-    padding-top: 84px;
+    padding-top: var(--space-12);
     padding-bottom: var(--space-11);
     display: flex;
     flex-direction: column;
@@ -54,7 +54,7 @@ body {
 
 .info-portrait-card,
 .info-summary-panel {
-    background: #000;
+    background: var(--black);
 }
 
 .info-portrait-card {
@@ -80,7 +80,6 @@ body {
     max-height: 100%;
     object-fit: contain;
     z-index: 1;
-    filter: contrast(1.05);
 }
 
 .info-data-label {
@@ -130,11 +129,6 @@ body {
     font-size: 15px;
 }
 
-.info-summary-copy p em {
-    font-style: normal;
-    color: var(--red);
-}
-
 .info-data-grid {
     display: grid;
     gap: 1px;
@@ -144,8 +138,8 @@ body {
 }
 
 .info-data-card {
-    padding: var(--space-4) 18px;
-    background: #050505;
+    padding: var(--space-4);
+    background: var(--black);
     display: flex;
     flex-direction: column;
     gap: var(--space-2);

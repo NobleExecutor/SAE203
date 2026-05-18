@@ -27,6 +27,7 @@
     --space-12: 80px;
     --space-13: 96px;
     --space-14: 112px;
+    --space-15: 128px;
     --font-size-xs: 7px;
     --font-size-sm: 9px;
     --font-size-base: 10px;
@@ -105,7 +106,7 @@ body {
 }
 
 .comments-panel-head h2 {
-    font-size: 22px;
+    font-size: var(--font-size-3xl);
     letter-spacing: var(--letter-spacing-1);
     text-transform: uppercase;
     margin-bottom: var(--space-2);
@@ -127,7 +128,7 @@ body {
     gap: var(--space-3);
     flex: 1;
     overflow-y: auto;
-    padding-right: 6px;
+    padding-right: var(--space-2);
 
 }
 
@@ -155,7 +156,7 @@ body {
     display: flex;
     justify-content: space-between;
     gap: var(--space-4);
-    margin-bottom: 12px;
+    margin-bottom: var(--space-3);
 }
 
 .comment-author {
@@ -167,7 +168,7 @@ body {
 .comment-body {
     color: rgba(255, 255, 255, 0.82);
     font-size: var(--font-size-lg);
-    padding: 6px 0;
+    padding: var(--space-2) 0;
 }
 
 .comments-form {
@@ -195,7 +196,7 @@ textarea.comments-input {
     background: rgba(255, 255, 255, 0.03);
     color: var(--white);
     font: inherit;
-    padding: 14px var(--space-4);
+    padding: var(--space-3) var(--space-4);
     outline: none;
 }
 
@@ -213,9 +214,9 @@ textarea.comments-input {
     border: 1px solid rgba(192, 57, 43, 0.75);
     background: rgba(192, 57, 43, 0.14);
     color: var(--white);
-    padding: 12px var(--space-5);
+    padding: var(--space-3) var(--space-5);
     font-family: 'HelveticaNeue', Helvetica, sans-serif;
-    font-size: 12px;
+    font-size: var(--font-size-lg);
     letter-spacing: var(--letter-spacing-3);
     text-transform: uppercase;
     cursor: pointer;
@@ -258,7 +259,7 @@ nav {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 0 128px;
+    padding: 0 var(--space-15);
     border-bottom: 1px solid var(--card-border);
     background: rgba(0, 0, 0, 0.85);
     backdrop-filter: blur(8px);
@@ -323,8 +324,8 @@ nav {
 main {
     padding-top: var(--space-14);
     padding-bottom: var(--space-13);
-    padding-left: 128px;
-    padding-right: 128px;
+    padding-left: var(--space-15);
+    padding-right: var(--space-15);
 }
 
 /* PAGE HEADER */
@@ -337,7 +338,7 @@ main {
     letter-spacing: var(--letter-spacing-6);
     text-transform: uppercase;
     color: var(--red);
-    margin-bottom: 10px;
+    margin-bottom: var(--space-3);
 }
 
 .page-header-title {
@@ -400,7 +401,7 @@ main {
     color: rgba(255, 255, 255, 0.2);
     letter-spacing: var(--letter-spacing-4);
     text-transform: uppercase;
-    font-size: 11px;
+    font-size: var(--font-size-base);
 }
 
 .search-count {
@@ -415,7 +416,7 @@ main {
 /* FILTERS */
 .filters {
     display: flex;
-    gap: 10px;
+    gap: var(--space-3);
     flex-wrap: wrap;
     margin-bottom: var(--space-8);
 }
@@ -432,7 +433,7 @@ main {
     color: var(--dim);
     border: 1px solid var(--card-border);
     background: transparent;
-    padding: var(--space-2) 18px;
+    padding: var(--space-2) var(--space-4);
     cursor: pointer;
     transition: color 0.2s, border-color 0.2s, background 0.2s;
     user-select: none;
@@ -526,7 +527,7 @@ main {
 
 /* Info bar */
 .card-info {
-    padding: 14px var(--space-4);
+    padding: var(--space-3) var(--space-4);
     border-top: 1px solid var(--card-border);
     transition: border-color 0.3s;
 }
@@ -537,14 +538,14 @@ main {
 
 .card-name-jp {
     font-family: 'MatissePro', serif;
-    font-size: 11px;
+    font-size: var(--font-size-base);
     color: rgba(255, 255, 255, 0.3);
-    letter-spacing: 1px;
+    letter-spacing: var(--letter-spacing-1);
     margin-bottom: var(--space-1);
 }
 
 .card-name-en {
-    font-size: 12px;
+    font-size: var(--font-size-lg);
     letter-spacing: var(--letter-spacing-1);
     text-transform: uppercase;
     color: var(--white);
@@ -553,7 +554,7 @@ main {
 
 .card-tags {
     display: flex;
-    gap: 6px;
+    gap: var(--space-2);
     flex-wrap: wrap;
 }
 
@@ -563,7 +564,7 @@ main {
     text-transform: uppercase;
     color: rgba(255, 255, 255, 0.3);
     border: 1px solid rgba(255, 255, 255, 0.1);
-    padding: var(--space-1) 10px;
+    padding: var(--space-1) var(--space-3);
 }
 
 /* BOTTOM BAR */
@@ -576,7 +577,7 @@ main {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 0 128px;
+    padding: 0 var(--space-15);
     border-top: 1px solid var(--card-border);
     background: rgba(0, 0, 0, 1);
     z-index: 10001;
