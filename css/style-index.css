@@ -50,7 +50,7 @@ body {
 /* NEON et GENESIS — smaller */
 .word-sm {
     font-family: 'MatissePro';
-    font-size: clamp(2.8rem, 8.5vw, 7rem);
+    font-size: 7rem;
     letter-spacing: 0.05em;
     text-transform: uppercase;
     color: #fff;
@@ -61,7 +61,7 @@ body {
 /* EVANGELION — larger */
 .word-lg {
     font-family: 'MatissePro';
-    font-size: clamp(4rem, 12.5vw, 10.5rem);
+    font-size: 10.5rem;
     letter-spacing: 0.05em;
     text-transform: uppercase;
     color: #fff;
@@ -71,7 +71,7 @@ body {
 
 .japanese {
     font-family: 'MatissePro', serif;
-    font-size: clamp(0.9rem, 2vw, 1.7rem);
+    font-size: 1.7rem;
     color: #c0392b;
     letter-spacing: 0.1em;
     margin-top: 0.7em;
