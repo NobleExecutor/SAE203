@@ -52,7 +52,6 @@
             <div class="info-portrait-card">
                 <div class="info-portrait-frame">
                     <img src="assets/img/<?= $currentEpisode[0]['id_ep'] == 27 ? "eoe.png" : "nge.png"; ?>" alt="Cover de <?= $currentEpisode[0]['id_ep'] == 27 ? "The End Of Evangelion" : "Neon Genesis Evangelion"; ?>" class="info-portrait-image">
-                    <div class="info-portrait-code">FILE 01</div>
                 </div>
             </div>
 

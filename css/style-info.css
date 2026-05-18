@@ -73,20 +73,6 @@ body {
     overflow: hidden;
 }
 
-.info-portrait-code {
-    position: absolute;
-    font-size: 0.5rem;
-    letter-spacing: 0.4em;
-    text-transform: uppercase;
-    color: rgba(255, 255, 255, 0.28);
-    z-index: 2;
-}
-
-.info-portrait-code {
-    right: 1rem;
-    bottom: 1rem;
-}
-
 .info-portrait-image {
     position: relative;
     width: min(100%, 340px);

@@ -33,20 +33,6 @@ body {
     line-height: 0.92;
 }
 
-/* SCANLINES (global) */
-.title-card::before {
-    content: '';
-    position: absolute;
-    inset: 0;
-    background: repeating-linear-gradient(0deg,
-            transparent,
-            transparent 2px,
-            rgba(0, 0, 0, 0.07) 2px,
-            rgba(0, 0, 0, 0.07) 4px);
-    pointer-events: none;
-    z-index: 5;
-}
-
 /* NEON et GENESIS — smaller */
 .word-sm {
     font-family: 'MatissePro';
