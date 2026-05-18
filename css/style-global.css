@@ -26,8 +26,6 @@
     --space-12: 80px;
     --space-13: 96px;
     --space-14: 112px;
-    --panel-width: 448px;
-    --panel-offset-open: 480px;
     --font-size-xs: 7px;
     --font-size-sm: 9px;
     --font-size-base: 10px;
@@ -73,7 +71,7 @@ body {
     position: fixed;
     top: 0;
     right: 0;
-    width: var(--panel-width);
+    width: 500px;
     height: 100%;
     padding: var(--space-6);
     background: rgba(0, 0, 0, 0.82);
@@ -246,7 +244,7 @@ textarea.comments-input {
 }
 
 .comments-container.opened+.comments-container-btn {
-    right: var(--panel-offset-open);
+    right: 532px;
 }
 
 /* NAV */
@@ -469,7 +467,7 @@ main {
 /* CHARACTER GRID */
 .character-grid {
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
     gap: 1px;
     background: var(--card-border);
     border: 1px solid var(--card-border);
