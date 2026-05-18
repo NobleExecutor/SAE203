@@ -23,6 +23,7 @@ function countCardsEp() {
     // Pour afficher le nombre d'éléments actuellement sur l'écran en vérifiant si l'attribut CSS display à une valeur ou non
     currentEpNb = 0;
     episodeRows.forEach(episode => {
+        // Utilisation de getComputedStyle car simplement utiliser style.display ne marcherait pas, étant donné que les filtres appliquent des classes, contrairement à la barre de recherche qui change le style directement dans l'HTML
         if (window.getComputedStyle(episode).display !== "none") {
             currentEpNb++;
         }

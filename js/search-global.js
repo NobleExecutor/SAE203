@@ -23,6 +23,7 @@ function countCards() {
     // Pour afficher le nombre d'éléments actuellement sur l'écran en vérifiant si l'attribut CSS display à une valeur différente de none ou non
     currentCardNb = 0;
     characterCards.forEach(card => {
+        // Utilisation de getComputedStyle car simplement utiliser style.display ne marcherait pas, étant donné que les filtres appliquent des classes, contrairement à la barre de recherche qui change le style directement dans l'HTML
         if (window.getComputedStyle(card).display !== "none") {
             currentCardNb++;
         }
