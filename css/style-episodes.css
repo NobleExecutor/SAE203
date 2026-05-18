@@ -17,6 +17,10 @@
     position: relative;
     overflow: hidden;
     min-height: var(--space-12);
+    scale: 0;
+    opacity: 0;
+    animation: .3s popIn ease-out forwards;
+    animation-delay: calc((sibling-index() - 1) * .05s);
 }
 
 .episode-row::before {

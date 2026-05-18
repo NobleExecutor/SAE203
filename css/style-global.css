@@ -484,6 +484,19 @@ main {
     text-decoration: none;
     display: block;
     min-width: 0;
+    scale: 0;
+    opacity: 0;
+    animation: .3s popIn ease-out forwards;
+    animation-delay: calc((sibling-index() - 1) * .05s);
+}
+
+/* animation en différentiel créé à l'aide d'une nouvelle règle CSS (sibling-index() https://www.youtube.com/watch?v=ISHneblVJYI) */
+
+@keyframes popIn {
+    to {
+        scale: 1;
+        opacity: 1;
+    }
 }
 
 .character-grid.filter-active .character-card {
