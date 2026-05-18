@@ -23,7 +23,7 @@ function countCards() {
     // Pour afficher le nombre d'éléments actuellement sur l'écran en vérifiant si l'attribut CSS display à une valeur différente de none ou non
     currentCardNb = 0;
     characterCards.forEach(card => {
-        if (window.getComputedStyle(card).display !== "none") {
+        if (card.style.display !== "none") {
             currentCardNb++;
         }
     });
