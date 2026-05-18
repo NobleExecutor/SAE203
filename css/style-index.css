@@ -6,6 +6,35 @@
     padding: 0;
 }
 
+:root {
+    --space-1: 4px;
+    --space-2: 8px;
+    --space-3: 12px;
+    --space-4: 16px;
+    --space-5: 20px;
+    --space-6: 24px;
+    --space-7: 32px;
+    --space-8: 40px;
+    --space-9: 48px;
+    --space-10: 64px;
+    --space-11: 72px;
+    --space-12: 80px;
+    --space-13: 96px;
+    --space-14: 112px;
+    --font-size-xs: 8px;
+    --font-size-sm: 10px;
+    --font-size-base: 12px;
+    --font-size-lg: 13px;
+    --font-size-2xl: 28px;
+    --font-size-hero-sm: 112px;
+    --font-size-hero-lg: 168px;
+    --letter-spacing-1: 2px;
+    --letter-spacing-2: 3px;
+    --letter-spacing-3: 4px;
+    --letter-spacing-4: 5px;
+    --letter-spacing-5: 6px;
+}
+
 html,
 body {
     width: 100%;
@@ -17,12 +46,12 @@ body {
 
 /* TITLE CARD */
 .title-card {
-    width: 100vw;
-    height: 100vh;
+    width: 100%;
+    height: 100%;
     display: flex;
     align-items: center;
     justify-content: flex-start;
-    padding-left: 8vw;
+    padding-left: 128px;
     background: #000;
     position: relative;
 }
@@ -36,8 +65,8 @@ body {
 /* NEON et GENESIS — smaller */
 .word-sm {
     font-family: 'MatissePro';
-    font-size: 7rem;
-    letter-spacing: 0.05em;
+    font-size: var(--font-size-hero-sm);
+    letter-spacing: 6px;
     text-transform: uppercase;
     color: #fff;
     font-weight: normal;
@@ -47,8 +76,8 @@ body {
 /* EVANGELION — larger */
 .word-lg {
     font-family: 'MatissePro';
-    font-size: 10.5rem;
-    letter-spacing: 0.05em;
+    font-size: var(--font-size-hero-lg);
+    letter-spacing: 8px;
     text-transform: uppercase;
     color: #fff;
     font-weight: normal;
@@ -57,53 +86,53 @@ body {
 
 .japanese {
     font-family: 'MatissePro', serif;
-    font-size: 1.7rem;
+    font-size: var(--font-size-2xl);
     color: #c0392b;
-    letter-spacing: 0.1em;
-    margin-top: 0.7em;
+    letter-spacing: var(--letter-spacing-2);
+    margin-top: var(--space-3);
 }
 
 .episode-label {
     font-family: 'HelveticaNeue', Helvetica, sans-serif;
-    font-size: clamp(0.55rem, 0.9vw, 0.75rem);
-    letter-spacing: 0.4em;
+    font-size: 12px;
+    letter-spacing: var(--letter-spacing-5);
     text-transform: uppercase;
     color: rgba(255, 255, 255, 0.4);
-    margin-bottom: 1.6rem;
+    margin-bottom: 26px;
 }
 
 .divider {
-    width: clamp(60px, 7vw, 100px);
+    width: 100px;
     height: 1px;
     background: rgba(255, 255, 255, 0.5);
-    margin: 1.6rem 0;
+    margin: 26px 0;
 }
 
 .meta-block {
     display: flex;
     flex-direction: column;
-    gap: 0.5rem;
+    gap: var(--space-2);
 }
 
 .meta-row {
     display: flex;
     align-items: baseline;
-    gap: 1.2rem;
+    gap: 18px;
 }
 
 .meta-label {
     font-family: 'HelveticaNeue', Helvetica, sans-serif;
-    font-size: clamp(0.5rem, 0.75vw, 0.65rem);
-    letter-spacing: 0.4em;
+    font-size: 10px;
+    letter-spacing: var(--letter-spacing-5);
     text-transform: uppercase;
     color: rgba(255, 255, 255, 0.35);
-    min-width: 7em;
+    min-width: 56px;
 }
 
 .meta-value {
     font-family: 'HelveticaNeue', Helvetica, sans-serif;
-    font-size: clamp(0.6rem, 0.9vw, 0.78rem);
-    letter-spacing: 0.15em;
+    font-size: 12px;
+    letter-spacing: var(--letter-spacing-1);
     color: rgba(255, 255, 255, 0.8);
 }
 
@@ -116,29 +145,29 @@ body {
 }
 
 .corner--tl {
-    top: 2rem;
-    left: 2rem;
+    top: var(--space-7);
+    left: var(--space-7);
     border-top: 1px solid rgba(255, 255, 255, 0.9);
     border-left: 1px solid rgba(255, 255, 255, 0.9);
 }
 
 .corner--tr {
-    top: 2rem;
-    right: 2rem;
+    top: var(--space-7);
+    right: var(--space-7);
     border-top: 1px solid rgba(255, 255, 255, 0.9);
     border-right: 1px solid rgba(255, 255, 255, 0.9);
 }
 
 .corner--bl {
-    bottom: 2rem;
-    left: 2rem;
+    bottom: var(--space-7);
+    left: var(--space-7);
     border-bottom: 1px solid rgba(255, 255, 255, 0.9);
     border-left: 1px solid rgba(255, 255, 255, 0.9);
 }
 
 .corner--br {
-    bottom: 2rem;
-    right: 2rem;
+    bottom: var(--space-7);
+    right: var(--space-7);
     border-bottom: 1px solid rgba(255, 255, 255, 0.9);
     border-right: 1px solid rgba(255, 255, 255, 0.9);
 }
@@ -147,17 +176,17 @@ body {
 
 .bottom-line {
     position: absolute;
-    bottom: 2.2rem;
-    left: 8vw;
-    right: 8vw;
+    bottom: 36px;
+    left: 128px;
+    right: 128px;
     display: flex;
     justify-content: space-between;
 }
 
 .bottom-line span {
     font-family: 'HelveticaNeue', Helvetica, sans-serif;
-    font-size: clamp(0.45rem, 0.65vw, 0.58rem);
-    letter-spacing: 0.3em;
+    font-size: 9px;
+    letter-spacing: var(--letter-spacing-2);
     color: rgba(255, 255, 255, 0.4);
     text-transform: uppercase;
 }
@@ -166,7 +195,7 @@ body {
 
 .enter-btn-wrap {
     position: absolute;
-    bottom: 5rem;
+    bottom: var(--space-12);
     left: 0;
     right: 0;
     display: flex;
@@ -176,12 +205,12 @@ body {
 .enter-btn {
     display: inline-block;
     font-family: 'HelveticaNeue', Helvetica, sans-serif;
-    font-size: 0.7rem;
-    letter-spacing: 0.5em;
+    font-size: 11px;
+    letter-spacing: var(--letter-spacing-5);
     text-transform: uppercase;
     color: #fff;
     border: 1px solid rgba(255, 255, 255, 0.3);
-    padding: 0.8em 2.2em;
+    padding: 10px 24px;
     cursor: pointer;
     text-decoration: none;
     background: transparent;
