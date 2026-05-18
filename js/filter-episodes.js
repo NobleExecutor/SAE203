@@ -14,8 +14,6 @@ function toggleFilter() {
         episodesList.classList.toggle(filter.value, filter.checked);
     });
 
-    const searchInput = document.getElementById("searchInput");
-
     // Permet de remettre à jour le compteur d'éléments affichés
     countCardsEp();
 }

@@ -14,8 +14,6 @@ function toggleFilter() {
         characterGrid.classList.toggle(filter.name, filter.checked);
     });
 
-    const searchInput = document.getElementById("searchInput");
-
     // Permet de remettre à jour le compteur d'éléments affichés
     countCards();
 }   
