@@ -491,6 +491,7 @@ main {
 }
 
 /* animation en différentiel créé à l'aide d'une nouvelle règle CSS (sibling-index() https://www.youtube.com/watch?v=ISHneblVJYI) */
+/* Pas encore disponible sur Firefox */
 
 @keyframes popIn {
     to {
