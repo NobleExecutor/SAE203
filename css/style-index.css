@@ -263,8 +263,13 @@ body {
 
 @media (max-width: 720px) {
     .title-card {
+        align-items: center;
         justify-content: center;
-        padding: var(--space-9) var(--space-5) var(--space-15);
+        padding: var(--space-7) var(--space-5) var(--space-15);
+    }
+
+    .title-card>div:not(.corner):not(.enter-btn-wrap):not(.bottom-line) {
+        transform: translateY(-24px);
     }
 
     .word-sm {
@@ -321,9 +326,6 @@ body {
 }
 
 @media (max-width: 480px) {
-    .title-card {
-        padding: var(--space-8) var(--space-7) var(--space-15);
-    }
 
     .word-sm {
         font-size: 38px;
@@ -336,7 +338,7 @@ body {
 
     .bottom-line {
         bottom: var(--space-2);
-        left: var(--space-7);
-        right: var(--space-7);
+        left: var(--space-5);
+        right: var(--space-5);
     }
 }

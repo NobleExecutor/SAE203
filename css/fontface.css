@@ -1,14 +1,17 @@
 /* Initialisation des polices d'écriture */
 
 @font-face {
-    font-family: MatissePro;
+    font-family: 'MatissePro';
     font-display: swap;
-    font-weight: 900;
+    font-style: normal;
+    font-weight: 400;
     src: url("../assets/fonts/MatissePro.woff2") format("woff2");
 }
 
 @font-face {
-    font-family: HelveticaNeue;
+    font-family: 'HelveticaNeue';
     font-display: swap;
+    font-style: normal;
+    font-weight: 400;
     src: url("../assets/fonts/HelveticaNeue.woff2") format("woff2");
 }
