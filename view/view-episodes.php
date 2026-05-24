@@ -73,7 +73,12 @@
             <span class="nav-logo-top">Neon Genesis</span>
             <span class="nav-logo-main">Evangelion</span>
         </a>
-        <ul class="nav-links">
+        <button class="nav-toggle" type="button" aria-label="Ouvrir le menu" aria-expanded="false" aria-controls="navLinks">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+        <ul class="nav-links" id="navLinks">
             <li><a href="index.php">Home</a></li>
             <li><a href="characters.php">Personnages</a></li>
             <li><a href="episodes.php" class="active">Episodes</a></li>
@@ -181,5 +186,6 @@
     <script src="js/search-episodes.js"></script>
     <script src="js/filter-episodes.js"></script>
     <script src="js/comments.js"></script>
+    <script src="js/nav-menu.js"></script>
 </body>
 </html>

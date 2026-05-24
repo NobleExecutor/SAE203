@@ -175,3 +175,73 @@
     color: var(--red);
     transform: translateX(4px);
 }
+
+@media (max-width: 900px) {
+    .episode-row {
+        align-items: stretch;
+    }
+
+    .episode-number {
+        width: var(--space-11);
+        padding: var(--space-5) var(--space-3);
+    }
+
+    .episode-titles,
+    .episode-meta {
+        padding: var(--space-5);
+    }
+
+    .episode-meta {
+        width: 28%;
+    }
+}
+
+@media (max-width: 680px) {
+    .episode-row,
+    .episodes-list.arc-1 .episode-row.arc-1,
+    .episodes-list.arc-2 .episode-row.arc-2,
+    .episodes-list.arc-3 .episode-row.arc-3,
+    .episodes-list.arc-4 .episode-row.arc-4 {
+        display: grid;
+        grid-template-columns: 64px minmax(0, 1fr) 32px;
+        align-items: stretch;
+    }
+
+    .episode-number {
+        width: auto;
+        grid-row: 1 / span 2;
+        padding: var(--space-4) var(--space-2);
+    }
+
+    .episode-titles {
+        padding: var(--space-4) var(--space-4) var(--space-2);
+    }
+
+    .episode-title-jp,
+    .episode-title-en {
+        white-space: normal;
+        overflow: visible;
+        text-overflow: clip;
+    }
+
+    .episode-meta {
+        width: auto;
+        grid-column: 2;
+        align-items: flex-start;
+        border-left: none;
+        padding: 0 var(--space-4) var(--space-4);
+    }
+
+    .episode-date {
+        align-items: flex-start;
+    }
+
+    .episode-arrow {
+        grid-column: 3;
+        grid-row: 1 / span 2;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 0;
+    }
+}

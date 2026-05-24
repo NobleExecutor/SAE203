@@ -61,6 +61,7 @@ body {
     display: flex;
     flex-direction: column;
     min-height: 0;
+    overflow: hidden;
 }
 
 .info-portrait-frame {
@@ -143,4 +144,94 @@ body {
     display: flex;
     flex-direction: column;
     gap: var(--space-2);
+}
+
+@media (max-width: 1100px) {
+    html,
+    body {
+        height: auto;
+        min-height: 100%;
+        overflow-x: hidden;
+        overflow-y: auto;
+    }
+
+    .info-page {
+        height: auto;
+        min-height: calc(100vh - var(--space-8));
+        overflow: visible;
+    }
+
+    .info-hero {
+        grid-template-columns: minmax(280px, 36%) 1fr;
+        min-height: 560px;
+    }
+
+    .info-portrait-image {
+        width: auto;
+        height: auto;
+        max-width: min(280px, 88%);
+        max-height: min(520px, 62vh);
+    }
+}
+
+@media (max-width: 760px) {
+    .info-page {
+        padding-top: var(--space-7);
+        padding-bottom: var(--space-12);
+    }
+
+    .info-header {
+        align-items: flex-start;
+        flex-direction: column;
+        gap: var(--space-4);
+    }
+
+    .info-back-link {
+        width: 100%;
+        text-align: center;
+        letter-spacing: var(--letter-spacing-2);
+    }
+
+    .info-hero {
+        display: flex;
+        flex-direction: column;
+        min-height: 0;
+    }
+
+    .info-portrait-frame {
+        min-height: 300px;
+        max-height: 48vh;
+        padding: var(--space-4);
+    }
+
+    .info-portrait-image {
+        width: auto;
+        height: auto;
+        max-width: 86%;
+        max-height: min(320px, 42vh);
+    }
+
+    .info-summary-panel {
+        overflow: visible;
+        padding: var(--space-5);
+    }
+
+    .info-summary-topline {
+        flex-direction: column;
+        gap: var(--space-2);
+        letter-spacing: var(--letter-spacing-2);
+    }
+
+    .info-summary-copy p {
+        font-size: 14px;
+        line-height: 1.7;
+    }
+
+    .info-data-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .info-data-value {
+        overflow-wrap: anywhere;
+    }
 }
