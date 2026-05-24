@@ -264,7 +264,7 @@ body {
 @media (max-width: 720px) {
     .title-card {
         justify-content: center;
-        padding: var(--space-12) var(--space-5) var(--space-15);
+        padding: var(--space-9) var(--space-5) var(--space-15);
     }
 
     .word-sm {
@@ -273,9 +273,9 @@ body {
     }
 
     .word-lg {
-        font-size: 64px;
-        letter-spacing: var(--letter-spacing-3);
-        overflow-wrap: anywhere;
+        font-size: 56px;
+        letter-spacing: var(--letter-spacing-2);
+        white-space: nowrap;
     }
 
     .japanese {
@@ -293,28 +293,7 @@ body {
     }
 
     .corner {
-        width: 24px;
-        height: 24px;
-    }
-
-    .corner--tl,
-    .corner--tr {
-        top: var(--space-4);
-    }
-
-    .corner--bl,
-    .corner--br {
-        bottom: var(--space-4);
-    }
-
-    .corner--tl,
-    .corner--bl {
-        left: var(--space-4);
-    }
-
-    .corner--tr,
-    .corner--br {
-        right: var(--space-4);
+        display: none;
     }
 
     .enter-btn-wrap {
@@ -341,17 +320,23 @@ body {
     }
 }
 
-@media (max-width: 420px) {
+@media (max-width: 480px) {
     .title-card {
-        padding-left: var(--space-4);
-        padding-right: var(--space-4);
+        padding: var(--space-8) var(--space-7) var(--space-15);
     }
 
     .word-sm {
-        font-size: 40px;
+        font-size: 38px;
     }
 
     .word-lg {
-        font-size: 52px;
+        font-size: 44px;
+        letter-spacing: var(--letter-spacing-1);
+    }
+
+    .bottom-line {
+        bottom: var(--space-2);
+        left: var(--space-7);
+        right: var(--space-7);
     }
 }
