@@ -108,19 +108,19 @@
     <!-- Filters -->
     <div class="filters">
       <label>
-        <input class="filter-checkbox" type="checkbox" name="filtrePilote" id="pilote">
+        <input class="filter-checkbox" type="checkbox" name="filtrePilote">
         <span class="filter-btn">Pilote</span>
       </label>
       <label>
-        <input class="filter-checkbox" type="checkbox" name="filtreNerv" id="nerv">
+        <input class="filter-checkbox" type="checkbox" name="filtreNerv">
         <span class="filter-btn">NERV</span>
       </label>
       <label>
-        <input class="filter-checkbox" type="checkbox" name="filtreSeele" id="seele">
+        <input class="filter-checkbox" type="checkbox" name="filtreSeele">
         <span class="filter-btn">SEELE</span>
       </label>
       <label>
-        <input class="filter-checkbox" type="checkbox" name="filtreCivil" id="civil">
+        <input class="filter-checkbox" type="checkbox" name="filtreCivil">
         <span class="filter-btn">Civil</span>
       </label>
     </div>

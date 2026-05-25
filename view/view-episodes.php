@@ -110,19 +110,19 @@
         <!-- Filters (arcs) -->
         <div class="filters">
             <label>
-                <input class="filter-checkbox" type="checkbox" name="arc" value="arc-1">
+                <input class="filter-checkbox" type="checkbox" name="arc-1">
                 <span class="filter-btn">Ep. 01-06</span>
             </label>
             <label>
-                <input class="filter-checkbox" type="checkbox" name="arc" value="arc-2">
+                <input class="filter-checkbox" type="checkbox" name="arc-2">
                 <span class="filter-btn">Ep. 07-13</span>
             </label>
             <label>
-                <input class="filter-checkbox" type="checkbox" name="arc" value="arc-3">
+                <input class="filter-checkbox" type="checkbox" name="arc-3">
                 <span class="filter-btn">Ep. 14-19</span>
             </label>
             <label>
-                <input class="filter-checkbox" type="checkbox" name="arc" value="arc-4">
+                <input class="filter-checkbox" type="checkbox" name="arc-4">
                 <span class="filter-btn">Ep. 20-26</span>
             </label>
         </div>

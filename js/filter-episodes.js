@@ -22,10 +22,10 @@ function toggleFilter() {
 
     filters.forEach(filter => {
         if (filter.checked) {
-            episodesList.classList.add(filter.value);
+            episodesList.classList.add(filter.name);
         }
         else {
-            episodesList.classList.remove(filter.value);
+            episodesList.classList.remove(filter.name);
         }
     });
 
