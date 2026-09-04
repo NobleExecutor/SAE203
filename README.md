@@ -133,7 +133,7 @@ SAE203/
 
 ## 🗄 Schéma de la Base de Données
 
-La base de données relationnelle (`nge_db` / `4a6ctm_nge_db`) est structurée autour de **5 tables**, dont une table de relation n-n (`tue`) et une table de liaison logique (`episodes` -> `anges`) :
+La base de données relationnelle (`nge_db`) est structurée autour de **5 tables**, dont une table de relation n-n (`tue`) et une table de liaison logique (`episodes` -> `anges`) :
 
 ```mermaid
 erDiagram
@@ -245,7 +245,7 @@ L'interface a été conçue pour offrir une immersion immédiate dans l'ambiance
 1. **Cloner le dépôt dans votre répertoire web (`htdocs` ou `www`) :**
 
    ```bash
-   git clone https://github.com/votre-compte/SAE203.git
+   git clone https://github.com/NobleExecutor/SAE203.git
    cd SAE203
    ```
 
@@ -279,10 +279,4 @@ L'interface a été conçue pour offrir une immersion immédiate dans l'ambiance
 
 - **Projet :** SAE 203 — Conception et développement d'un site web connecté à une base de données
 - **Thème :** Neon Genesis Evangelion (新世紀エヴァンゲリオン)
-- **Formation :** BUT Métiers du Multimédia et de l'Internet (MMI) / Informatique
-
----
-
-<div align="center">
-  <sub>Système NERV MAGI — Tokyo-3 • Développé dans le cadre de la SAE 203</sub>
-</div>
+- **Formation :** BUT Métiers du Multimédia et de l'Internet (MMI)
