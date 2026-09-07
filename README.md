@@ -2,9 +2,11 @@
 
 <div align="center">
 
-![Neon Genesis Evangelion Banner](assets/img/nge.png)
+![Neon Genesis Evangelion Banner](src/assets/img/nge.png)
 
-[![PHP Version](https://img.shields.io/badge/PHP-7.4%20%7C%208.x-777BB4?style=for-the-badge&logo=php&logoColor=white)](https://www.php.net/)
+[![Docker](https://img.shields.io/badge/Docker-2496ED?style=for-the-badge&logo=docker&logoColor=white)](https://www.docker.com/)
+[![PHP Version](https://img.shields.io/badge/PHP-8.3%20%7C%207.4+-777BB4?style=for-the-badge&logo=php&logoColor=white)](https://www.php.net/)
+[![MariaDB](https://img.shields.io/badge/MariaDB-10.11-003545?style=for-the-badge&logo=mariadb&logoColor=white)](https://mariadb.org/)
 [![MySQL Database](https://img.shields.io/badge/MySQL-5.7%20%7C%208.0-4479A1?style=for-the-badge&logo=mysql&logoColor=white)](https://www.mysql.com/)
 [![HTML5](https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white)](https://developer.mozilla.org/fr/docs/Web/HTML)
 [![CSS3](https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white)](https://developer.mozilla.org/fr/docs/Web/CSS)
@@ -81,52 +83,57 @@ Le projet adopte une séparation claire des responsabilités inspirée du patter
 
 ```
 SAE203/
-├── index.php                 # Point d'entrée : Accueil & stats globales
-├── characters.php            # Point d'entrée : Galerie des personnages
-├── character-info.php        # Point d'entrée : Fiche détaillée personnage
-├── episodes.php              # Point d'entrée : Liste des épisodes & arcs
-├── episode-info.php          # Point d'entrée : Fiche détaillée épisode
-├── units.php                 # Point d'entrée : Galerie des unités EVA
-├── unit-info.php             # Point d'entrée : Fiche détaillée unité EVA
-├── angels.php                # Point d'entrée : Répertoire des Anges
-├── angel-info.php            # Point d'entrée : Fiche détaillée Ange
+├── Dockerfile                # Image PHP 8.3 Apache & extensions MySQL (pdo, pdo_mysql, mysqli)
+├── docker-compose.yml        # Orchestration multi-conteneurs (Web, MariaDB, phpMyAdmin)
+├── README.md                 # Documentation complète du projet
 │
-├── controller/
-│   └── controller.php        # Routeur central aiguillant vers les vues selon $page
-│
-├── model/
-│   └── model.php             # Couche d'accès aux données (PDO MySQL, requêtes préparées/fonctions)
-│
-├── view/                     # Vues & composants graphiques (Templates PHP/HTML)
-│   ├── view-index.php
-│   ├── view-characters.php
-│   ├── view-character-info.php
-│   ├── view-episodes.php
-│   ├── view-episode-info.php
-│   ├── view-units.php
-│   ├── view-unit-info.php
-│   ├── view-angels.php
-│   └── view-angel-info.php
-│
-├── js/                       # Scripts front-end interactifs (Vanilla ES6)
-│   ├── comments.js           # Gestion de l'ouverture/fermeture du drawer commentaires
-│   ├── filter.js             # Logique de filtrage dynamique (personnages & unités)
-│   ├── filter-episodes.js    # Filtrage par arcs narratifs
-│   ├── search-global.js      # Recherche dynamique instantanée sur les grilles
-│   └── search-episodes.js    # Recherche instantanée dans les listes d'épisodes
-│
-├── css/                      # Feuilles de styles & Design System NERV
-│   ├── fontface.css          # Déclarations des polices MatissePro et HelveticaNeue
-│   ├── style-global.css      # Variables CSS, layout global, drawer commentaires, cartes
-│   ├── style-index.css       # Style spécifique du carton de titre d'accueil
-│   ├── style-episodes.css    # Style de la liste des épisodes
-│   └── style-info.css        # Style des fiches d'informations détaillées
-│
-└── assets/                   # Ressources statiques
-    ├── favicon.ico
-    ├── fonts/                # Polices WOFF2 (MatissePro, HelveticaNeue)
-    ├── img/                  # Images de couverture, personnages, anges et EVAs
-    └── svg/                  # Icônes vectorielles (message.svg, cross.svg)
+└── src/                      # Racine du code source servi par Apache
+    ├── index.php             # Point d'entrée : Accueil & stats globales
+    ├── characters.php        # Point d'entrée : Galerie des personnages
+    ├── character-info.php    # Point d'entrée : Fiche détaillée personnage
+    ├── episodes.php          # Point d'entrée : Liste des épisodes & arcs
+    ├── episode-info.php      # Point d'entrée : Fiche détaillée épisode
+    ├── units.php             # Point d'entrée : Galerie des unités EVA
+    ├── unit-info.php         # Point d'entrée : Fiche détaillée unité EVA
+    ├── angels.php            # Point d'entrée : Répertoire des Anges
+    ├── angel-info.php        # Point d'entrée : Fiche détaillée Ange
+    │
+    ├── controller/
+    │   └── controller.php    # Routeur central aiguillant vers les vues selon $page
+    │
+    ├── model/
+    │   └── model.php         # Couche d'accès aux données (PDO MySQL, requêtes préparées/fonctions)
+    │
+    ├── view/                 # Vues & composants graphiques (Templates PHP/HTML)
+    │   ├── view-index.php
+    │   ├── view-characters.php
+    │   ├── view-character-info.php
+    │   ├── view-episodes.php
+    │   ├── view-episode-info.php
+    │   ├── view-units.php
+    │   ├── view-unit-info.php
+    │   ├── view-angels.php
+    │   └── view-angel-info.php
+    │
+    ├── js/                   # Scripts front-end interactifs (Vanilla ES6)
+    │   ├── comments.js       # Gestion de l'ouverture/fermeture du drawer commentaires
+    │   ├── filter.js         # Logique de filtrage dynamique (personnages & unités)
+    │   ├── filter-episodes.js # Filtrage par arcs narratifs
+    │   ├── search-global.js  # Recherche dynamique instantanée sur les grilles
+    │   └── search-episodes.js # Recherche instantanée dans les listes d'épisodes
+    │
+    ├── css/                  # Feuilles de styles & Design System NERV
+    │   ├── fontface.css      # Déclarations des polices MatissePro et HelveticaNeue
+    │   ├── style-global.css  # Variables CSS, layout global, drawer commentaires, cartes
+    │   ├── style-index.css   # Style spécifique du carton de titre d'accueil
+    │   ├── style-episodes.css # Style de la liste des épisodes
+    │   └── style-info.css    # Style des fiches d'informations détaillées
+    │
+    └── assets/               # Ressources statiques
+        ├── favicon.ico
+        ├── fonts/            # Polices WOFF2 (MatissePro, HelveticaNeue)
+        ├── img/              # Images de couverture, personnages, anges et EVAs
+        └── svg/              # Icônes vectorielles (message.svg, cross.svg)
 ```
 
 ---
@@ -229,18 +236,82 @@ L'interface a été conçue pour offrir une immersion immédiate dans l'ambiance
 | **Style & UI**           | **CSS3 Modern**       | Variables CSS (Custom Properties), Flexbox, CSS Grid, Responsive Design         |
 | **Interactivité**        | **JavaScript (ES6+)** | Filtrage dynamique du DOM en direct, drawer asynchrone, manipulation de classes |
 | **Typographie & Assets** | **WOFF2 & SVG**       | Polices Matisse Pro & Helvetica Neue intégrées localement, icônes vectorielles  |
+| **Conteneurisation**     | **Docker & Compose**  | Environnement complet : PHP 8.3 Apache, MariaDB 10.11, phpMyAdmin               |
 
 ---
 
 ## 🚀 Installation & Démarrage Rapide
 
-### Prérequis
+### Option 1 : Avec Docker & Docker Compose (Méthode Recommandée) 🐳
+
+Cette méthode configure et lance automatiquement l'ensemble de l'environnement (**PHP 8.3 Apache**, **MariaDB 10.11** et **phpMyAdmin**) sans nécessiter d'installation préalable de serveur web ou de base de données sur votre machine hôte.
+
+#### Prérequis
+
+- [Docker Desktop](https://www.docker.com/products/docker-desktop/) (ou Docker Engine avec le plugin Docker Compose v2+)
+- [Git](https://git-scm.com/)
+
+#### Étapes d'installation
+
+1. **Cloner le dépôt :**
+
+   ```bash
+   git clone https://github.com/NobleExecutor/SAE203.git
+   cd SAE203
+   ```
+
+2. **Lancer les conteneurs :**
+
+   ```bash
+   docker compose up -d --build
+   ```
+
+   > Cette commande construit l'image Docker personnalisée (PHP 8.3 avec les extensions MySQL `mysqli`, `pdo`, `pdo_mysql`), monte en direct le code du dossier `./src` et démarre les trois services en arrière-plan.
+
+3. **Accéder aux services :**
+
+   | Service | URL | Identifiants / Détails |
+   | :--- | :--- | :--- |
+   | **🌐 Terminal NERV (Application Web)** | [http://localhost](http://localhost) | Servi sur le port `80` par Apache / PHP 8.3 |
+   | **🗃️ phpMyAdmin** | [http://localhost:8080](http://localhost:8080) | **Serveur** : `db`<br>**Utilisateur** : `root` (ou `user`)<br>**Mot de passe** : `root` (ou `user`) |
+   | **💾 Base MariaDB 10.11** | Port interne `3306` (`db`) | **Nom BDD** : `nge_db`<br>Volume persistant : `db_data` |
+
+4. **Initialiser la base de données :**
+   - Ouvrez phpMyAdmin sur [http://localhost:8080](http://localhost:8080).
+   - Connectez-vous avec `root` / `root` (le serveur `db` est configuré automatiquement).
+   - La base de données **`nge_db`** est déjà automatiquement créée par le conteneur MariaDB.
+   - Importez votre script SQL ou créez les tables requises (`personnages`, `anges`, `episodes`, `tue`, `commentaires`).
+
+5. **Gestion quotidienne des conteneurs :**
+
+   ```bash
+   # Consulter les logs en temps réel
+   docker compose logs -f
+
+   # Consulter les logs d'un service spécifique (ex: web ou db)
+   docker compose logs -f web
+
+   # Arrêter les conteneurs
+   docker compose down
+
+   # Réinitialiser complètement les conteneurs et les données (purge des volumes)
+   docker compose down -v
+   ```
+
+---
+
+### Option 2 : Installation Traditionnelle (Sans Docker) 💻
+
+<details>
+<summary><b>Dérouler pour voir les instructions d'installation locale (XAMPP, WAMP, Laragon...)</b></summary>
+
+#### Prérequis
 
 - Un serveur web local type [XAMPP](https://www.apachefriends.org/), [WAMP](https://www.wampserver.com/), [MAMP](https://www.mamp.info/) ou [Laragon](https://laragon.org/).
-- PHP 7.4 ou version supérieure.
-- MySQL 5.7 ou MariaDB 10.4+.
+- PHP 7.4 ou supérieur (avec extensions `pdo_mysql` / `mysqli` activées).
+- MySQL 5.7+ ou MariaDB 10.4+.
 
-### Étapes d'installation
+#### Étapes d'installation
 
 1. **Cloner le dépôt dans votre répertoire web (`htdocs` ou `www`) :**
 
@@ -254,24 +325,28 @@ L'interface a été conçue pour offrir une immersion immédiate dans l'ambiance
    - Créez une nouvelle base de données nommée **`nge_db`** avec l'interclassement `utf8mb4_general_ci`.
    - Créez les tables requises (`personnages`, `anges`, `episodes`, `tue`, `commentaires`).
 
-3. **Vérifier les identifiants de connexion :**
-   Dans [`model/model.php`](model/model.php), assurez-vous que les informations de connexion correspondent à votre environnement :
+3. **Adapter les identifiants de connexion BDD :**
+   Dans [`src/model/model.php`](src/model/model.php), modifiez l'hôte `db` (réservé au réseau interne Docker) par `localhost` et ajustez le mot de passe selon votre serveur local :
 
    ```php
+   // Exemple pour XAMPP / WAMP standard :
    $database = new PDO('mysql:host=localhost;dbname=nge_db', 'root', '', $options);
    ```
 
 4. **Lancer le projet :**
-   - Démarrez vos services Apache et MySQL.
+   - Démarrez vos services Apache et MySQL via votre panneau de contrôle local.
    - Accédez à l'application dans votre navigateur :
      ```text
-     http://localhost/SAE203/index.php
+     http://localhost/SAE203/src/index.php
      ```
-     _(Ou via le serveur interne PHP)_ :
+     _(Ou via le serveur interne de PHP en vous plaçant dans le dossier `src/`)_ :
    ```bash
+   cd src
    php -S localhost:8000
    ```
-   _Puis ouvrir `http://localhost:8000`_.
+   _Puis rendez-vous sur `http://localhost:8000`_.
+
+</details>
 
 ---
 
