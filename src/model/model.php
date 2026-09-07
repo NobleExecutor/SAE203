@@ -4,7 +4,7 @@
 function connexionBDD() {
   try {
     $options = array(PDO::MYSQL_ATTR_INIT_COMMAND => "SET NAMES utf8");
-    $database = new PDO('mysql:host=localhost;dbname=nge_db', 'root', '', $options);
+    $database = new PDO('mysql:host=db;dbname=nge_db', 'root', 'root', $options);
   } 
   
   catch (Exception $err) {
